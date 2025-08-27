@@ -149,8 +149,45 @@ h2{
     margin-top: 4%;
 }
 
+<<<<<<< HEAD
+.review_2_small{
+    max-width: 50%;
+}
+
+/* === Contact Us Flex Box === */
+
+
+.contact_us_section{
+    max-width: 98%;
+}
+.contact_us_flex{
+    display:flex;
+    flex-direction: column;
+    /* gap: 40%; */
+    justify-content: center;
+}
+
+.contact_us_photo_div{
+    /* margin-left:52%; */
+    max-width: 98%;
+    margin-left: 1%;
+    margin-top:1%;
+}
+
+.contact_us_writing{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/* === Footer Styling === */
+
+.footer_div{
+    display:flex;
+    flex-direction: column;
+=======
 .spotify_player{
     position: relative;
+>>>>>>> parent of 50d1f76 (A finished landing page/epk)
     max-width: 100%;
     left: 50%;
 }
