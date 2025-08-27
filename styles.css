@@ -1,10 +1,11 @@
 /*Colour scheme variables for easy editing*/
 :root {
     --main-color:rgb(0, 0, 0);
-    --secondary-color: rgb(17, 15, 15);
+    --secondary-color: rgb(4, 4, 4);
     --hover-background-color: rgb(46, 40, 40);
     --tertiary-color: rgb(215, 35, 35);
     --font-color: rgb(245, 237, 237);
+    --link-color: rgb(173, 171, 171);
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -13,10 +14,21 @@
 }
 
 h1{
+    font-size: xxx-large;
     font-weight: 100;
 }
 
 h2{
+    font-weight: 100;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.review_big{
+    font-size: xxx-large;
     font-weight: 100;
 }
 
@@ -31,192 +43,210 @@ h2{
     margin-top: -10%;
 }
 
-/* stle controlling the box at the top wich has our band name on it */
-
 .header_div{
     background-color: rgba(0, 0, 0, 0.35);
-    /* opacity: 0.2; */
     z-index: 1;
-    height: 30%;
     max-width: 100%;
+    width: 100%;
     left: 0px;
-    top: 69%;
-    position: absolute;
+    top: 60%;
+    position:absolute;
+    
+}
 
+.header_logo_div{
+    position:relative;
+    display:flex;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .band_logo{
     opacity: 1.0;
-    width: 60%;
-    height: 100%;
-    left: 20%;
+    max-width: 100%;
     position: relative;
 }
 
-/* The style for the navigation bar */
-.sticky_nav_div ul{
-    position: absolute;
-    top:100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    list-style-type: none;
-}
+/* === The biography section === */
 
-.sticky_nav_div{
-    position: sticky;
-    left:20%;
-}
-
-.sticky_nav_div li{
-    float: left;
-}
-
-.sticky_nav_div a{
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
-    color: var(--font-color);
-}
-
-.sticky_nav_div a:hover{
-    color: var(--tertiary-color);
-    background-color: var(--hover-background-color);
-}
-
-/* Bio style */
 .bio{
-    position: relative;
-    margin-top: 2%;
-    font-size: larger;
+    max-width: 98%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .bio_content_div{
-    margin-top: 2%;
-}
-
-.bio_photo{
-    position: relative;
-    /* left:50%; */
-    max-width: 50%;
-    max-height: 20%;
-    float: right;
-    margin: 5px;
-    /* margin-top: -10%; */
-}
-
-.bio_writing_list{
-    position:relative;
-    top: 40px;
-    font-size: xx-large;
-    text-align:right;
-    margin-right: 10px;
-    list-style-type: none;
-
-}
-
-.bio_writing{
-    position: relative;
-    top:80px;
-    margin: 10px, 30px, 9px, 10px;
-    font-size: x-large;
-    /* background-color: var(--secondary-color); */
-    max-width: 49%;
-}
-
-.review_1{
-    position: relative;
-    top: 80px;
-    display:inline;
-}
-
-.review_1_big{
-    /* font-size: xxx-large; */
-    font-size: 80px;
-}
-
-.review_1_small{
-    font-weight: 200;
-    float: right;
-}
-
-/* Listen to us section styling */
-
-.our_music_div{
-    position: relative;
-    margin-top: 4%;
-}
-
-<<<<<<< HEAD
-.review_2_small{
-    max-width: 50%;
-}
-
-/* === Contact Us Flex Box === */
-
-
-.contact_us_section{
-    max-width: 98%;
-}
-.contact_us_flex{
+    margin-top: 3%;
     display:flex;
-    flex-direction: column;
-    /* gap: 40%; */
+    flex-direction: row;
+    margin-left: 1%;
     justify-content: center;
 }
 
-.contact_us_photo_div{
-    /* margin-left:52%; */
+.bio_left{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.bio_list_box{
+    margin-top: 6%;
+}
+
+.bio_writing_list{
+    text-align:right;
+    list-style-type: none;
+    font-size: xx-large;
+}
+
+.bio_writing{
+    margin-top: 3%;
+    font-size: x-large;
+    font-weight: 200;
+}
+
+.review_1_div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.review_1_big{
+    font-size: xxx-large;
+    font-weight: 100;
+}
+
+.review_1_small{
+    margin-left: 53%;
+}
+
+.bio_photo_right{
+    max-width: 50%;
+}
+
+.bio_photo{
+    max-width: 100%;
+}
+
+
+/* === Listen === */
+
+.our_music_div{
     max-width: 98%;
     margin-left: 1%;
-    margin-top:1%;
+}
+
+.music_content_div{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+    
+    /* column-gap: 10%; */
+}
+
+.video_player{
+    max-width: 25%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.live_gig_video{
+
+}
+
+.our_music_right_div{
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self:stretch;
+    justify-content:flex-start;
+}
+
+.spotify{
+    width: 100%;
+}
+
+.spotify_player{
+    
+    
+}
+
+.review_2{
+    margin-top: 10%;
+}
+
+.review_2_small{
+    margin-left: 50%;
+    text-align: right;
+}
+
+/* === Contact === */
+.contact_us_section{
+    max-width: 98%;
+    margin-left: 1%;
+}
+
+.contact_us_flex{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
 }
 
 .contact_us_writing{
-    margin-top: 1%;
-    margin-bottom: 1%;
+    font-size: xx-large;
+    font-weight: 200;
+    margin-top: 2%;
+    margin-left: 2%;
 }
 
-/* === Footer Styling === */
+.contact_us_photo{
+    max-width: 100%;
+    margin-top: 2%;
+}
 
+/* === Footer === */
 .footer_div{
+    background-color: var(--secondary-color);
     display:flex;
     flex-direction: column;
-=======
-.spotify_player{
-    position: relative;
->>>>>>> parent of 50d1f76 (A finished landing page/epk)
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.footer_top_logo_and_links{
+    display:flex;
+    flex-direction: column;
+    max-width:40%;
+
+}
+
+.footer_logo{
+    max-width: 50%;
+}
+
+.footer_links_flex{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.footer_link{
+    /* max-width: 20%; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    display:block;
+    max-width: 1%;
+}
+
+.footer_link_icon{
     max-width: 100%;
-    left: 50%;
-}
-
-/* Links styling */
-
-.links_div{
-    position: relative;
-    margin-top: 4%;
-}
-
-.link_list{
-    list-style-type: none;
-    text-align: center;
-    display: inline-block;
-}
-
-.link_icon{
-    max-width: 5%;
-    margin-right: 10%;
-}
-
-
-/* Out now text styling */
-.new_song_announcement_div{
-    position: relative;
-    margin-top: 5%;
-}
-
-.new_song_announcement_div h1{
-    text-align: right;
 }
