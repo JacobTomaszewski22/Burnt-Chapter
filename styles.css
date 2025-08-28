@@ -1,11 +1,10 @@
 /*Colour scheme variables for easy editing*/
 :root {
     --main-color:rgb(0, 0, 0);
-    --secondary-color: rgb(4, 4, 4);
+    --secondary-color: rgb(17, 15, 15);
     --hover-background-color: rgb(46, 40, 40);
     --tertiary-color: rgb(215, 35, 35);
     --font-color: rgb(245, 237, 237);
-    --link-color: rgb(173, 171, 171);
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -14,7 +13,6 @@
 }
 
 h1{
-    font-size: xxx-large;
     font-weight: 100;
 }
 
@@ -22,14 +20,46 @@ h2{
     font-weight: 100;
 }
 
-a{
-    color: var(--link-color);
-    text-decoration: none;
+img{
+    max-width: 100%;
+    height: auto;
 }
 
-.review_big{
-    font-size: xxx-large;
-    font-weight: 100;
+a{
+    color: rgb(206, 198, 198);
+}
+
+
+/* for phone resolutions */
+/* @media only screen and (max-width: 480px){
+    body{
+        font-size: 12px;
+    }
+
+    img {
+        width: 50%;
+    }
+} */
+
+/* @media only screen and (min-width: 1200px){
+    img{
+        max-height: 80%;
+    }
+} */
+
+
+/* stle controlling the box at the top wich has our band name on it */
+.sticky_player{
+    position: sticky;
+    top:0px;
+    z-index: 2;
+}
+
+.sticky_player_iframe{
+}
+
+.header{
+    position: relative;
 }
 
 /* The band image style */
@@ -37,216 +67,256 @@ a{
     width: 100%;
     position: relative;
     object-fit: fill;
-    left: 0px;
+    left: 1%;
     top: 0px;
     z-index: -1;
-    margin-top: -10%;
+    margin-top: -12%;
+    max-width: 100%;
 }
 
 .header_div{
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.35);
     z-index: 1;
     max-width: 100%;
-    width: 100%;
     left: 0px;
-    top: 60%;
-    position:absolute;
-    
-}
-
-.header_logo_div{
-    position:relative;
-    display:flex;
-    margin-left: 20%;
-    margin-right: 20%;
+    top: 54%;
 }
 
 .band_logo{
-    opacity: 1.0;
-    max-width: 100%;
     position: relative;
+    opacity: 1.0;
+    width: 60%;
+    height: 50%;
+    left: 20%;
 }
 
-/* === The biography section === */
+/* The style for the navigation bar */
+.sticky_nav_div ul{
+    position: absolute;
+    top:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    list-style-type: none;
+}
 
+.sticky_nav_div{
+    position: sticky;
+    left:20%;
+}
+
+.sticky_nav_div li{
+    float: left;
+}
+
+.sticky_nav_div a{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    color: var(--font-color);
+}
+
+.sticky_nav_div a:hover{
+    color: var(--tertiary-color);
+    background-color: var(--hover-background-color);
+}
+
+/* Bio style */
 .bio{
+    position: relative;
+    margin-top: 2%;
+    font-size: larger;
     max-width: 98%;
-    margin-left: 2%;
-    margin-right: 2%;
 }
 
 .bio_content_div{
-    margin-top: 3%;
-    display:flex;
+    display: flex;
     flex-direction: row;
-    margin-left: 1%;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    gap: 1%;
 }
 
-.bio_left{
-    display:flex;
+.bio_content_subgrid{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 8%;
-    margin-right: 1%;
-    margin-left: 1%;
 }
 
-.bio_list_box{
-    margin-top: 6%;
-}
+/* .bio_writing_paragraph{
+} */
+
 
 .bio_writing_list{
+    position:relative;
+    /* top: 40px; */
+    font-size: xxx-large;
+    font-weight: 100;
     text-align:right;
+    /* margin-right: 1%; */
+    /* right: 53%; */
     list-style-type: none;
-    font-size: xx-large;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .bio_writing{
-    margin-top: 3%;
+    position: relative;
     font-size: x-large;
+    margin-left: 2%;
+    margin-top: 8%;
+}
+
+.review_1{
+    margin-top: 5%;
+}
+
+.review_big{
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+
+.review_small{
+    position: relative;
+    top: 0px;
     font-weight: 200;
+    left:20%;
 }
 
-.review_1_div{
-    display: flex;
-    flex-direction: column;
-    margin-top: 4%;
-    margin-bottom: 5%;
-}
-
-.review_1_big{
-    font-size: xxx-large;
-    font-weight: 100;
-}
-
-.review_1_small{
-    margin-left: 53%;
-}
-
-.bio_photo_right{
+.bio_photo_div{
     max-width: 50%;
+    grid-column-start: 2;
 }
 
 .bio_photo{
-    max-width: 100%;
+    max-width: 98%;
+    margin: 1%;
 }
 
 
-/* === Listen === */
+/* === Listen to us section styling === */
 
 .our_music_div{
+    position: relative;
+    margin-top: 1%;
     max-width: 98%;
-    margin-left: 1%;
 }
 
 .music_content_div{
-    display:flex;
+    position: relative;
+    display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-content: center;
-    align-items: center;
-    
-    /* column-gap: 10%; */
-}
-
-.video_player{
-    max-width: 25%;
-    margin-left: 2%;
-    margin-right: 2%;
+    align-items: flex-start;
+    justify-content: left;
+    column-gap: 1%;
 }
 
 .live_gig_video{
-
+    width: 25%;
+    margin: 1%;
 }
 
 .our_music_right_div{
-    flex-grow: 1;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-self:stretch;
-    justify-content:flex-start;
-}
-
-.spotify{
     width: 100%;
 }
 
 .spotify_player{
-    
-    
+    margin: 1%, 0%, 0%, 0%;
+    width: 99%;
 }
 
 .review_2{
-    margin-top: 10%;
+    /* margin-top: 2%; */
+    max-width: 98%;;
 }
 
 .review_2_small{
-    margin-left: 50%;
+    /* max-width: 50%; */
     text-align: right;
+    max-width: 100%;
+    left: 0%;
 }
 
-/* === Contact === */
+/* === Contact Us Flex Box === */
+
+
 .contact_us_section{
     max-width: 98%;
-    margin-left: 1%;
+}
+.contact_us_flex{
+    display:flex;
+    flex-direction: column;
+    /* gap: 40%; */
+    justify-content: center;
 }
 
-.contact_us_flex{
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
+.contact_us_photo_div{
+    /* margin-left:52%; */
+    max-width: 98%;
+    margin-left: 1%;
+    margin-top:1%;
 }
 
 .contact_us_writing{
-    font-size: xx-large;
-    font-weight: 200;
-    margin-top: 2%;
-    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
-.contact_us_photo{
-    max-width: 100%;
-    margin-top: 2%;
-}
+/* === Footer Styling === */
 
-/* === Footer === */
 .footer_div{
-    background-color: var(--secondary-color);
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    
+    max-width: 100%;
+    background-color: var(--secondary-color);
+    justify-content:center;
+    margin-top: 8%;
 }
 
 .footer_top_logo_and_links{
     display:flex;
     flex-direction: column;
     max-width:40%;
-
+    align-items: center;
+    justify-content:center;
+    margin-left: 30%;
 }
 
 .footer_logo{
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .footer_links_flex{
     display:flex;
     flex-direction:row;
+    gap: 10%;
+    align-items: center;
+    /* justify-content: space-between; */
     justify-content: center;
-}
-
-.footer_link{
-    /* max-width: 20%; */
-    flex-grow: 1;
-    flex-shrink: 1;
-    display:block;
-    max-width: 1%;
+    margin: 0% 10% 0% 10%;
 }
 
 .footer_link_icon{
-    max-width: 100%;
+    min-height: 100%;
 }
+
+.footer_link{
+    width: 7%;
+
+}
+
+.footer_bottom_contact_and_copyright{
+    display:flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: space-between;
+    gap: 10%;
+    text-align: center;
+    vertical-align: middle;
+}
+
