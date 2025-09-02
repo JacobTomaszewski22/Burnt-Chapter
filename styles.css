@@ -29,6 +29,13 @@ a{
     color: rgb(206, 198, 198);
 }
 
+/* Page animations */
+/* @keyframes logoAnimation{
+    from{
+
+    }
+} */
+
 
 /* for phone resolutions */
 /* @media only screen and (max-width: 480px){
@@ -49,14 +56,6 @@ a{
 
 
 /* stle controlling the box at the top wich has our band name on it */
-.sticky_player{
-    position: sticky;
-    top:0px;
-    z-index: 2;
-}
-
-.sticky_player_iframe{
-}
 
 .header{
     position: relative;
@@ -92,34 +91,65 @@ a{
 }
 
 /* The style for the navigation bar */
-.sticky_nav_div ul{
-    position: absolute;
-    top:100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    list-style-type: none;
+.sticky_player{
+    position: relative; 
+    top:0;
+    z-index: 1;
+
+}
+
+.sticky_player_iframe{
 }
 
 .sticky_nav_div{
     position: sticky;
-    left:20%;
+    top: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+.navigation_home{
+    max-width: 10%;
+}
+
+.navigation_band_logo{
+    width: 100%;
+}
+
+.navigation_block{
+    
+}
+
+.sticky_nav_div ul{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style-type: none;
+    background-color: var(--secondary-color);
 }
 
 .sticky_nav_div li{
     float: left;
 }
 
-.sticky_nav_div a{
-    float: left;
-    text-align: center;
+
+
+.navigation_link{
+    display:inline-block;
+    /* padding-top: 16px; */
     padding: 14px 16px;
     font-size: 17px;
     color: var(--font-color);
 }
 
-.sticky_nav_div a:hover{
+.navigation_link:hover{
     color: var(--tertiary-color);
     background-color: var(--hover-background-color);
 }
