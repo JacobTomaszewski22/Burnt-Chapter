@@ -30,8 +30,8 @@ export default function StickyPlayer({stickyPlayerClassName = "", soundCloudAPIR
             {/* <iframe width="100%" height="60" scrolling="no" frameBorder="no" allow="autoplay" src={soundCloudAPIRequest}></iframe> */}
             <iframe width="100%" height="60" allow="autoplay" src={soundCloudAPIRequest}></iframe>
             <div style={soundCloudDivStyle}>
-                <a href="https://soundcloud.com/burnt-chapter" title="Burnt Chapter" target="_blank" style={soundCloudAnchorStyle}>Burnt Chapter</a> · 
-                <a href={`https://soundcloud.com/burnt-chapter/${soundCloudTrack}`} title={`${soundCloudTrackTitle}`} target="_blank" style={soundCloudAnchorStyle}>{soundCloudTrackTitle}</a>
+                <a href="https://soundcloud.com/burnt-chapter" title="Burnt Chapter" target="_blank" rel="noreferrer" style={soundCloudAnchorStyle}>Burnt Chapter</a> · 
+                <a href={`https://soundcloud.com/burnt-chapter/${soundCloudTrack}`} title={`${soundCloudTrackTitle}`} target="_blank" rel="noreferrer" style={soundCloudAnchorStyle}>{soundCloudTrackTitle}</a>
             </div>
         </div>
     )

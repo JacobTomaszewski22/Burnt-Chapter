@@ -1,7 +1,9 @@
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import BandImageHeader from "./BandImageHeader";
 import StickyPlayer from "./StickyPlayer";
+import LandingPage from "./LandingPage";
+import BandPageFooter from "./BandPageFooter";
 
 //Create our app component
 const App = () => {
@@ -9,6 +11,8 @@ const App = () => {
         <div>
             <BandImageHeader/>
             <StickyPlayer />
+            <LandingPage />
+            <BandPageFooter />
         </div>
     );
 };
