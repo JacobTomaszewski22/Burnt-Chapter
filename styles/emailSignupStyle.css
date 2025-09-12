@@ -1,0 +1,21 @@
+@import "colorScheme.css";
+
+/* this is the style sheet for controlling the email signup popup*/
+.email_signup_container{
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email_signup_window{
+    position:relative;
+    background-color: var(--secondary-color);
+    padding: 2% 1% 2% 1%;
+}
