@@ -8,14 +8,13 @@ import OurMusic from "./OurMusic";
 import ContactUs from "./ContactUs";
 import EmailerSignup from "./EmailerSignup";
 
-export default function LandingPage(){
-    return(
-        <>
-            <EmailerSignup />
-            <Biography />
-            <OurMusic />
-            <ContactUs />
-        </>
-
-    )
+export default function LandingPage() {
+  return (
+    <>
+      <EmailerSignup />
+      <Biography />
+      <OurMusic />
+      <ContactUs />
+    </>
+  );
 }
