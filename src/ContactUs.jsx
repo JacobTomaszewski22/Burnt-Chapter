@@ -11,7 +11,7 @@ export default function ContactUs() {
           </h4>
         </div>
         <div className="contact_us_photo_div">
-          <img className="contact_us_photo" src="images/all_together_2." />
+          <img className="contact_us_photo" src="images/all_together_2.webp" />
         </div>
       </div>
     </div>
