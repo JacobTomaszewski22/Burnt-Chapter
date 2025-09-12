@@ -37,7 +37,7 @@ export default function Biography() {
 
         <div className="bio_photo_div">
           <div className="bio_photos_wrapper">
-            <img className="bio_photo" src="/images/TomSinging.webp" />
+            <img className="bio_photo" src="/images/TomSinging.webp" loading="eager"/>
           </div>
         </div>
       </div>

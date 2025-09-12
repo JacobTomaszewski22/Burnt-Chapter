@@ -12,6 +12,7 @@ export default function BandPageFooter() {
               src="images/link_icons/Spotify_icon.svg"
               alt="Spotify Link"
               className="footer_link_icon"
+              loading="lazy"
             />
           </a>
           <a
@@ -22,6 +23,7 @@ export default function BandPageFooter() {
               src="images/link_icons/Instagram_logo_2022.svg"
               alt="Instagram Link"
               className="footer_link_icon"
+              loading="lazy"
             />
           </a>
           <a
@@ -32,6 +34,7 @@ export default function BandPageFooter() {
               src="images/link_icons/2023_Facebook_icon.svg"
               alt="Facebook Link"
               className="footer_link_icon"
+              loading="lazy"
             />
           </a>
           <a
@@ -42,6 +45,7 @@ export default function BandPageFooter() {
               src="images/link_icons/Antu_soundcloud.svg"
               alt="Soundcloud Link"
               className="footer_link_icon"
+              loading="lazy"
             />
           </a>
         </div>
