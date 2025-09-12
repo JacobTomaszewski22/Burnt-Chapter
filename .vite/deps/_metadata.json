@@ -1,0 +1,31 @@
+{
+  "hash": "dfa8ea1f",
+  "configHash": "13d6783e",
+  "lockfileHash": "61df67e2",
+  "browserHash": "3aa9b21d",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "c2e0c222",
+      "needsInterop": true
+    },
+    "react-spotify-embed": {
+      "src": "../../node_modules/react-spotify-embed/dist/index.js",
+      "file": "react-spotify-embed.js",
+      "fileHash": "715200fd",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "ad48c56d",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-UTEJFLXC": {
+      "file": "chunk-UTEJFLXC.js"
+    }
+  }
+}
