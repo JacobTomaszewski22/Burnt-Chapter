@@ -11,36 +11,29 @@ export default function EmailerSignup() {
 
     let email = "";
     async function addRecordToDB(email){
-        // try{
-        //     const response = await fetch("/api/add-email", {
-        //         method: "POST",
-        //         headers: {"Content-Type": "application/json"},
-        //         body: JSON.stringify({ email }),
-        //     });
-        //     const responseData = await response.json();
-        //     if(!response.ok){
-        //         throw new Error(responseData.error || "Unknown error");
-        //     }
-        //     return true;
-        // } catch (error) {
-        //     throw new Error(`Error in EmailerSignup.jsx:addRecordToDB(): Sending database request error: [${error.toString()}]`);
-        // }
-    
-        
-        let db_request = `INSERT INTO emails_table(uuid, email, created_at) VALUES(gen_random_uuid(), '${email}', current_timestamp()) ON CONFLICT (email) DO NOTHING`;
-
-        if(!email){
-            throw "Error in [addRecordToDB()]: No email passed into function";
-        }
-        'use server';
-        const sql = neon(import.meta.env.VITE_DATABASE_URL);
-        //Three collumns in the database: UUID, Email, timestamp
-        //send to db
         try{
-            await sql`${db_request}`;
-            return(true);
-        }catch(error){
-            throw(`Error in EmailerSignup.jsx:addRecordToDB(): Sending database request error: [${error.toString()}]`);
+          console.log(JSON.stringify({ email }));
+          const emailObject = {
+            email: email
+          };
+            const response = await fetch("/api/email", {
+                method: "POST",
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(emailObject),
+            });
+            console.log(response.toString());
+            const responseData = response.json();
+            if(!response.ok){
+                throw new Error(responseData.error || "Unknown error");
+            }
+            
+            console.log(responseData);
+            return true;
+        } catch (error) {
+            throw new Error(`Error in EmailerSignup.jsx:addRecordToDB(): Sending database request error: [${error.toString()}]`);
         }
     }
     
