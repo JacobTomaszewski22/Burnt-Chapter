@@ -1,6 +1,7 @@
 if (
   process.env.NODE_ENV === "development" ||
-  process.env.NODE_ENV === "testing"
+  process.env.NODE_ENV === "testing" ||
+  process.env.NODE_ENV === "staging"
 ) {
   localStorage.removeItem("enteredEmail");
 }
