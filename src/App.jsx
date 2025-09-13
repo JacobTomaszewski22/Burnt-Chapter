@@ -4,7 +4,7 @@ import BandImageHeader from "./BandImageHeader";
 import StickyPlayer from "./StickyPlayer";
 import LandingPage from "./LandingPage";
 import BandPageFooter from "./BandPageFooter";
-import CookieConsentBanner from "./CookieConsentBanner";
+
 
 //Create our app component
 const App = () => {

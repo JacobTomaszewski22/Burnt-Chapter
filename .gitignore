@@ -4,3 +4,6 @@ dist/
 .env
 coverage/
 .vscode/
+.vercel
+.env**
+**.local

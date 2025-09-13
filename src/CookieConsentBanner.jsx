@@ -1,6 +1,6 @@
 //Not going to implement this right now
 /*This handles the react component of the cookie banner.
-*/
+ */
 function CookieConsentBannerComponent() {
   return (
     <div className="cookie_consent_container" id="cookie_consent_container">
@@ -12,20 +12,24 @@ function CookieConsentBannerComponent() {
           data on to third parties. It's up to you if you want a better
           experience!
         </p>
-        <form className="cookie_consent_form" id="cookie_consent_form" onSubmit={(event)=>{
+        <form
+          className="cookie_consent_form"
+          id="cookie_consent_form"
+          onSubmit={(event) => {
             event.preventDefault();
             //Store cookie that we have accepted cookies
-            if(event.target.value == "accept"){
-                localStorage.setItem('cookiesPreference',"true");
-            }else{
-                localStorage.setItem('cookiesPreference',"false");
+            if (event.target.value == "accept") {
+              localStorage.setItem("cookiesPreference", "true");
+            } else {
+              localStorage.setItem("cookiesPreference", "false");
             }
             //Hide the banner
-              const emailSignupContainer = document.getElementById(
-                "cookie_consent_container",
+            const emailSignupContainer = document.getElementById(
+              "cookie_consent_container",
             );
             emailSignupContainer.style.visibility = "hidden";
-        }}>
+          }}
+        >
           <div className="cookie_consent_buttons" id="cookie_consent_buttons">
             <button
               type="submit"
@@ -51,9 +55,8 @@ function CookieConsentBannerComponent() {
 }
 
 /*this handles the logic of if it should be shown*/
-export default function CookieConsentBanner(){
-    if(!localStorage.getItem('cookiesPreference')){
-        return(CookieConsentBannerComponent())
-    }
-    else return(<div/>);
+export default function CookieConsentBanner() {
+  if (!localStorage.getItem("cookiesPreference")) {
+    return CookieConsentBannerComponent();
+  } else return <div />;
 }

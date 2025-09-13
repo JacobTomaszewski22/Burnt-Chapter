@@ -10,7 +10,7 @@
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.9.0",
     "prettier": "^3.6.2",
-    "vite": "^5.4.2"
+    "vite": "^7.1.5"
   },
   "scripts": {
     "build": "vite build",
@@ -18,7 +18,9 @@
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,html}",
     "lint": "eslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pullEnvVars": "vercel env pull .env.development.local",
+    "linkVercel": "vercel link"
   },
   "repository": {
     "type": "git",
@@ -33,8 +35,12 @@
   },
   "homepage": "https://github.com/JacobTomaszewski22/Burnt-Chapter#readme",
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-spotify-embed": "^2.0.4"
+    "react-spotify-embed": "^2.0.4",
+    "vercel": "^25.2.0"
   }
 }
