@@ -15,7 +15,8 @@
     "vite": "^7.1.5"
   },
   "scripts": {
-    "build": "vite build & node --watch ./api/server.js",
+    "build": "vite build",
+    "start": "concurrently \"vite preview\" \"node ./api/server.js\"",
     "dev": "vite",
     "devAPI": "node --env-file=.env.development.local --watch ./api/server.js",
     "preview": "vite preview",
