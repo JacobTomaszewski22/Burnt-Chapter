@@ -5,7 +5,6 @@ import StickyPlayer from "./StickyPlayer";
 import LandingPage from "./LandingPage";
 import BandPageFooter from "./BandPageFooter";
 
-
 //Create our app component
 const App = () => {
   return (

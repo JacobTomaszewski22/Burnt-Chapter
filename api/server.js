@@ -2,6 +2,7 @@ import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import path from "path";
 import { fileURLToPath } from "url";
+import { neon } from "@neondatabase/serverless";
 
 const app = Fastify({
   logger: true,
@@ -12,7 +13,8 @@ const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-//now we need to authenticate with the neon database
+//now we need to setup the neon database object
+const sql = neon(process.env.DATABASE_URL);
 
 app.register(fastifyStatic, {
   root: path.join(__dirname, "public"),
@@ -65,6 +67,18 @@ app.post("/api/email", async (request, reply) => {
         .send({ error: `Invalid email provided:[ ${email}]` });
     }
     console.log(`Email recieved: ${email}`);
+
+    //Communicating with the neon database
+    try {
+      const result =
+        await sql`INSERT INTO email_table(id, email, created_at) VALUES(gen_random_uuid(), ${email}, current_timestamp) ON CONFLICT (email) DO NOTHING`;
+      // await sql`INSERT INTO email_table(id, email, created_at) VALUES(gen_random_uuid(), '${email}', current_timestamp) ON CONFLICT (email) DO NOTHING`;
+      console.log(JSON.stringify(result));
+    } catch (error) {
+      console.error(
+        `Error with sending INSERT request to database:\n\tError: [${error}]`,
+      );
+    }
 
     //successful data path
     return reply

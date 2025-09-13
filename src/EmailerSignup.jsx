@@ -1,42 +1,40 @@
-import { neon } from '@neondatabase/serverless';
-
-
-if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "testing" ) {
-    localStorage.removeItem("enteredEmail");
-    
+if (
+  process.env.NODE_ENV === "development" ||
+  process.env.NODE_ENV === "testing"
+) {
+  localStorage.removeItem("enteredEmail");
 }
 
-
 export default function EmailerSignup() {
+  let email = "";
+  async function addRecordToDB(email) {
+    try {
+      console.log(JSON.stringify({ email }));
+      const emailObject = {
+        email: email,
+      };
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailObject),
+      });
+      console.log(response.toString());
+      const responseData = response.json();
+      if (!response.ok) {
+        throw new Error(responseData.error || "Unknown error");
+      }
 
-    let email = "";
-    async function addRecordToDB(email){
-        try{
-          console.log(JSON.stringify({ email }));
-          const emailObject = {
-            email: email
-          };
-            const response = await fetch("/api/email", {
-                method: "POST",
-                headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(emailObject),
-            });
-            console.log(response.toString());
-            const responseData = response.json();
-            if(!response.ok){
-                throw new Error(responseData.error || "Unknown error");
-            }
-            
-            console.log(responseData);
-            return true;
-        } catch (error) {
-            throw new Error(`Error in EmailerSignup.jsx:addRecordToDB(): Sending database request error: [${error.toString()}]`);
-        }
+      console.log(responseData);
+      return true;
+    } catch (error) {
+      throw new Error(
+        `Error in EmailerSignup.jsx:addRecordToDB(): Sending database request error: [${error.toString()}]`,
+      );
     }
-    
+  }
 
   function exitEmailSignup() {
     //function to exit the email signup
@@ -45,9 +43,6 @@ export default function EmailerSignup() {
     );
     emailSignupContainer.style.visibility = "hidden";
   }
-
-
-  
 
   const hiddenStyle = {
     visibility: "hidden",
