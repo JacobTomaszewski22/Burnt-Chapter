@@ -93,31 +93,22 @@ app.post("/api/email", async (request, reply) => {
 });
 
 // Start the server if we're not in Vercel
-const start = async () => {
-  try {
-    await app.listen({ port: PORT });
-    console.log(`Server listening on port ${PORT}`);
-  } catch (err) {
-    console.error(err);
-    process.exit(1);
-  }
-};
+if (process.env.NODE_ENV != "production") {
+  const start = async () => {
+    try {
+      await app.listen({ port: PORT });
+      console.log(`Server listening on port ${PORT}`);
+    } catch (err) {
+      console.error(err);
+      process.exit(1);
+    }
+  };
 
-start();
+  start();
+}
 
-// let db_request = `INSERT INTO emails_table(uuid, email, created_at) VALUES(gen_random_uuid(), '${email}', current_timestamp()) ON CONFLICT (email) DO NOTHING`;
-// let db_request = `INSERT INTO emails_table(uuid, email, created_at) VALUES(gen_random_uuid(), '${email}', current_timestamp()) ON CONFLICT (email) DO NOTHING`;
-
-// if(!email){
-//     throw "Error in [addRecordToDB()]: No email passed into function";
-// }
-// 'use server';
-// const sql = neon(import.meta.env.VITE_DATABASE_URL);
-// //Three collumns in the database: UUID, Email, timestamp
-// //send to db
-// try{
-//     await sql`${db_request}`;
-//     return(true);
-// }catch(error){
-//     throw(`Error in EmailerSignup.jsx:addRecordToDB(): Sending database request error: [${error.toString()}]`);
-// }
+// For Vercel
+export default async function handler(request, response) {
+  await app.ready();
+  app.server.emit("request", request, response);
+}
