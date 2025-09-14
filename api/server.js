@@ -1,3 +1,5 @@
+//This only works for local development
+
 import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import path from "path";
