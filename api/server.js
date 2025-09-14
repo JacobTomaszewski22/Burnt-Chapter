@@ -112,3 +112,7 @@ export default async function handler(request, response) {
   await app.ready();
   app.server.emit("request", request, response);
 }
+
+export function GET(request: Request){
+  return new Response('Hello from vercel!');
+}
