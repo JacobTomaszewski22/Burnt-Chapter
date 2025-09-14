@@ -15,7 +15,6 @@ const __dirname = path.dirname(__filename);
 
 //now we need to setup the neon database object
 const sql = neon(process.env.DATABASE_URL);
-console.log(`SQL URL: [${process.env.DATABASE_URL}]`);
 
 app.register(fastifyStatic, {
   root: path.join(__dirname, "public"),
