@@ -23,7 +23,7 @@ app.register(fastifyStatic, {
   prefix: "/public/",
 });
 
-app.get("/", async (request, reply) => {
+app.get("/api/server", async (request, reply) => {
   const jsonObject = {
     hello: "world",
   };
