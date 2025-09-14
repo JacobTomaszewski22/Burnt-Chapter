@@ -23,19 +23,16 @@ app.register(fastifyStatic, {
   prefix: "/public/",
 });
 
-app.get("/api/test", async (request, reply) => {
-  // interface Response {
-  // name: string;
-  // }
-
-  // const reply = new Response(name = "hello");
-
+app.get("/test", async (request, reply) => {
   const jsonObject = {
     hello: "world",
   };
   // const reply = JSON.stringify(jsonObject)
   // return res.status(200).type('text').send(reply)
-  return reply.header("Content-Type", "application/json").send(jsonObject); // Fastify will handle JSON stringification
+  return reply
+    .status(200)
+    .header("Content-Type", "application/json")
+    .send(jsonObject); // Fastify will handle JSON stringification
 });
 
 //Setting up the post root
