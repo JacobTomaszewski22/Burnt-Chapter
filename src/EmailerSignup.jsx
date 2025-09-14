@@ -14,7 +14,7 @@ export default function EmailerSignup() {
       const emailObject = {
         email: email,
       };
-      const response = await fetch(`${import.meta.url}/api/email`, {
+      const response = await fetch(`/api/email`, {
         method: "POST",
         headers: {
           Accept: "application/json",
