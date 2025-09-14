@@ -58,7 +58,10 @@ app.post("/api/email", async (request, reply) => {
       const result =
         await sql`INSERT INTO email_table(id, email, created_at) VALUES(gen_random_uuid(), ${email}, current_timestamp) ON CONFLICT (email) DO NOTHING`;
       // await sql`INSERT INTO email_table(id, email, created_at) VALUES(gen_random_uuid(), '${email}', current_timestamp) ON CONFLICT (email) DO NOTHING`;
-      console.log(JSON.stringify(result));
+      console.log(`Result Returned From SQL: [ ${JSON.stringify(result)} ]`);
+      if (!result) {
+        console.log(`No Result Returned...`);
+      }
     } catch (error) {
       console.error(
         `Error with sending INSERT request to database:\n\tError: [${error}]`,
