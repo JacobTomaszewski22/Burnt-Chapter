@@ -113,6 +113,6 @@ export default async function handler(request, response) {
   app.server.emit("request", request, response);
 }
 
-export function GET(request: Request){
-  return new Response('Hello from vercel!');
+export function GET() {
+  return new Response("Hello from vercel!");
 }
