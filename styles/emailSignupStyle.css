@@ -19,3 +19,7 @@
     background-color: var(--secondary-color);
     padding: 2% 1% 2% 1%;
 }
+
+.email_Signup_exit{
+    float: right;
+}

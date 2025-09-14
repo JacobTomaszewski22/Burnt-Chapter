@@ -90,8 +90,9 @@ export default function EmailerSignup() {
               exitEmailSignup();
             }}
           >
-            <h2>Never Miss A Show!</h2>
+            <h2>&#128128;Never Miss A Show!&#128128;</h2>
             <p>Sign up to our mailing list to keep up to date!</p>
+            <p>Please disable ad-block for this site to allow this to work!</p>
             <input
               type="email"
               id="email_input"
