@@ -23,7 +23,7 @@ app.register(fastifyStatic, {
   prefix: "/public/",
 });
 
-app.get("/api", async (request, reply) => {
+app.get("/api/test", async (request, reply) => {
   // interface Response {
   // name: string;
   // }
