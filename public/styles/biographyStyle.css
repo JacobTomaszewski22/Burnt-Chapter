@@ -7,6 +7,8 @@
     margin-top: 2%;
     font-size: larger;
     max-width: 98%;
+    box-sizing: border-box;
+    
 }
 
 .bio_content_div{
@@ -109,5 +111,55 @@
     .review_1_small{
         left: 0%;
         text-align: right;
+    }
+}
+
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+    .bio{
+        max-width: 100%;
+    }
+    .bio_photo_div{
+        max-width: 98%;
+    }
+
+    .review_1_small{
+        left: 0%;
+        text-align: right;
+    }
+}
+
+@media screen and (width <= 478px) {
+/* start of phone styles */
+    .bio{
+        max-width: 100%;
+
+    }
+
+    .bio_writing{
+        padding-left: 8%;
+        margin-top: 8%;
+        font-size: large;
+        width: 92%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens:auto;
+    }
+
+    .bio_photo_div{
+        max-width: 98%;
+    }
+
+    .review_1_small{
+        left: 0%;
+        text-align: right;
+    }
+
+    .review_1_big{
+        padding-left: 4%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens:auto;
+        font-size: 10vh;
     }
 }

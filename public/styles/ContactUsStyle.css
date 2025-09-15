@@ -28,3 +28,9 @@
 }
 
 /* Works fine on large tablets, small tablets & phones */
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+    .contact_us_section{
+        max-width: 100%;
+    }
+}
