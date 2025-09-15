@@ -36,6 +36,10 @@
     color: aliceblue;
 }
 
+.email_Signup_exit:hover{
+    color: var(--tertiary-color);
+}
+
 .email_signup_form{
     display: flex;
     flex-direction: column;
@@ -52,6 +56,10 @@
 .email_signup_form button{
     padding: 8px;
     cursor: pointer;
+}
+
+.email_footer{
+    font-size: xx-small;
 }
 
 /* Large tablets work fine */

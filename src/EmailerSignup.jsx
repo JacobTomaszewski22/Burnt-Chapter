@@ -100,6 +100,7 @@ export default function EmailerSignup() {
               title="Invalid email address"
             />
             <button type="submit">Sign Up</button>
+            <p className="email_footer">By signing up you agree to recieve email communications from Burnt Chapter</p>
           </form>
         </div>
       </div>
