@@ -1,0 +1,83 @@
+/* === Footer Styling === */
+
+.footer_div{
+    display:flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: var(--secondary-color);
+    justify-content:center;
+    margin-top: 8%;
+}
+
+.footer_top_logo_and_links{
+    display:flex;
+    flex-direction: column;
+    max-width:40%;
+    align-items: center;
+    justify-content:center;
+    margin-left: 30%;
+}
+
+.footer_logo{
+    max-width: 40%;
+}
+
+.footer_links_flex{
+    display:flex;
+    flex-direction:row;
+    gap: 10%;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: center;
+    margin: 0% 10% 0% 10%;
+}
+
+.footer_link_icon{
+    min-height: 100%;
+}
+
+.footer_link{
+    width: 7%;
+
+}
+
+.footer_bottom_contact_and_copyright{
+    display:flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: space-between;
+    gap: 10%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 991px) {
+    .footer_logo{
+        max-width: 80%;
+    }
+
+    .footer_link{
+        width: 12%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer_logo{
+        max-width: 70%;
+    }
+
+    .footer_link{
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .footer_logo{
+        max-width: 80%;
+    }
+
+    .footer_link{
+        width: 18%;
+    }
+}

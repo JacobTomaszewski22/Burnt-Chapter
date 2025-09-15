@@ -1,0 +1,30 @@
+/* === Contact Us Flex Box === */
+.contact_us_section{
+    max-width: 98%;
+}
+.contact_us_flex{
+    display:flex;
+    flex-direction: column;
+    /* gap: 40%; */
+    justify-content: center;
+}
+
+.contact_us_writing{
+    margin-top: 1%;
+    margin-left: 4%;
+    margin-bottom: 1%;
+}
+
+.contact_us_photo_div{
+    /* margin-left:52%; */
+    max-width: 100%;
+    margin-left: 2%;
+    margin-top:1%;
+    margin-right:0%;
+}
+
+.contact_us_photo{
+    max-width: 100%;
+}
+
+/* Works fine on large tablets, small tablets & phones */

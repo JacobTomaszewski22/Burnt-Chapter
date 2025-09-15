@@ -5,6 +5,7 @@ export default function OurMusic() {
 
   return (
     <div className="our_music_div">
+      <link rel="stylesheet" href="styles/OurMusicStyle.css"/>
       <h1>Listen</h1>
       <hr />
       <div className="music_content_div">
@@ -24,7 +25,7 @@ export default function OurMusic() {
             link="https://open.spotify.com/artist/1ggfLpkzXNWzHIR8kUno4q?si=KsARGwz1QEWtEGRuMLgaow"
           />
           <div className="review_2">
-            <h2 className="review_big">
+            <h2 className="review_big review_2_big">
               "DEFINITELY A BAND TO KEEP AN EYE OUT FOR."
             </h2>
             <div className="review_small review_2_small">

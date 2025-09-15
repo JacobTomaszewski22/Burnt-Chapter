@@ -1,0 +1,113 @@
+@import "colorScheme.css";
+/* Bio style sheet */
+/* Desktop first approach */
+/* start of desktop styles */
+.bio{
+    position: relative;
+    margin-top: 2%;
+    font-size: larger;
+    max-width: 98%;
+}
+
+.bio_content_div{
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    gap: 1%;
+}
+
+.bio_content_subgrid{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .bio_writing_paragraph{
+} */
+
+
+.bio_writing_list{
+    position:relative;
+    /* top: 40px; */
+    font-size: xxx-large;
+    font-weight: 100;
+    text-align:right;
+    /* margin-right: 1%; */
+    /* right: 53%; */
+    list-style-type: none;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.bio_writing{
+    position: relative;
+    font-size: x-large;
+    margin-left: 2%;
+    margin-top: 8%;
+}
+
+.review_1{
+    margin-top: 5%;
+}
+
+.bio_photo_div{
+    max-width: 50%;
+    grid-column-start: 2;
+}
+
+.bio_photo{
+    max-width: 98%;
+    margin: 1%;
+}
+
+
+
+@media screen and (max-width: 991px) {
+/* start of large tablet styles */
+    .bio_writing{
+        margin-top: 2%;
+    }
+
+    .review_1{
+        margin-top: 0%;
+    }
+
+    .review_1_big{
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+/* start of medium tablet styles */
+    .bio_content_div{
+        flex-direction: column;
+    }
+
+    .bio_writing{
+        margin-top: 2%;
+    }
+
+    .review_1{
+        margin-top: 0%;
+    }
+
+    .bio_photo_div{
+        max-width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+    .bio{
+        max-width: 100%;
+    }
+    .bio_photo_div{
+        max-width: 100%;
+    }
+
+    .review_1_small{
+        left: 0%;
+        text-align: right;
+    }
+}

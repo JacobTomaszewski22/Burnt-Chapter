@@ -1,6 +1,7 @@
 export default function Biography() {
   return (
     <div className="bio">
+      <link rel="stylesheet" href="styles/biographyStyle.css"/>
       <h1>Biography</h1>
       <hr />
       <div className="bio_content_div">
@@ -28,8 +29,8 @@ export default function Biography() {
           </div>
 
           <div className="review_1">
-            <h2 className="review_big">"ABSOLUTE FILTH"</h2>
-            <div className="review_small">
+            <h2 className="review_big review_1_big">"ABSOLUTE FILTH"</h2>
+            <div className="review_small review_1_small">
               - Nicky Clifford (Radio Northwich)
             </div>
           </div>

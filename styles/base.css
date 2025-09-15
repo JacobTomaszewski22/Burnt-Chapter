@@ -1,0 +1,116 @@
+@import "colorScheme.css";
+
+h1{
+    font-weight: 100;
+}
+
+h2{
+    font-weight: 100;
+}
+
+h4{
+    font-weight: 100;
+    font-size: x-large;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    color: rgb(206, 198, 198);
+}
+
+
+
+/* stle controlling the box at the top wich has our band name on it */
+.sticky_player{
+    position: sticky;
+    top:0px;
+    z-index: 2;
+}
+
+.sticky_player_iframe{
+}
+
+.header{
+    position: relative;
+}
+
+/* The band image style */
+.header_image{
+    width: 100%;
+    position: relative;
+    object-fit: fill;
+    left: 0%;
+    top: 0px;
+    z-index: -1;
+    margin-top: -12%;
+    max-width: 100%;
+}
+
+.header_div{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    max-width: 100%;
+    left: 0px;
+    top: 54%;
+}
+
+.band_logo{
+    position: relative;
+    opacity: 1.0;
+    width: 60%;
+    height: 50%;
+    left: 20%;
+}
+
+/* The style for the navigation bar */
+.sticky_nav_div ul{
+    position: absolute;
+    top:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    list-style-type: none;
+}
+
+.sticky_nav_div{
+    position: sticky;
+    left:20%;
+}
+
+.sticky_nav_div li{
+    float: left;
+}
+
+.sticky_nav_div a{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    color: var(--font-color);
+}
+
+.sticky_nav_div a:hover{
+    color: var(--tertiary-color);
+    background-color: var(--hover-background-color);
+}
+
+/*review style that applies across React Elements*/
+
+.review_big{
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+
+.review_small{
+    position: relative;
+    top: 0px;
+    font-weight: 200;
+    left:20%;
+}
+
