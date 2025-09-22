@@ -1,19 +1,16 @@
-// import { StrictMode } from "react";
+import { StrictMode} from "react";
 import { createRoot } from "react-dom/client";
-import BandImageHeader from "./BandImageHeader";
-import StickyPlayer from "./StickyPlayer";
-import LandingPage from "./LandingPage";
-import BandPageFooter from "./BandPageFooter";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { routeTree } from './routeTree.gen';
+
+const router = createRouter({ routeTree });
 
 //Create our app component
 const App = () => {
   return (
-    <div>
-      <BandImageHeader />
-      <StickyPlayer />
-      <LandingPage />
-      <BandPageFooter />
-    </div>
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
   );
 };
 
