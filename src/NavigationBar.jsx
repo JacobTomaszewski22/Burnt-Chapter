@@ -1,42 +1,103 @@
 import { Link } from "@tanstack/react-router";
+import { useScrollPosition } from "./useScrollPosition";
+import StickyPlayer from "./StickyPlayer";
 
-export default function NavigationBar(){
+function Divider() {
     return(
-        <>
-        <link rel="stylesheet" href="styles/navigationBarStyle.css"/>
-        <div className = "navigation-bar-container">
-            <div className = "navigation-bar">
-                <div className = "navigation-home">
-                <Link to="/">
-                    <img
-                        className="navigation-home-image"
-                        src="/images/bcLogoBig.webp"
-                        loading="eager"
-                    />
-                </Link>
-            </div>
-            <div className = "navigation-link-div">
-                <Link className="navigation-link navigation-link-tickets" to="/tickets">
-                    <p>Tickets</p>
-                </Link>
-            </div>
-            <div className = "navigation-link-div">
-                <Link className="navigation-link navigation-link-news" to="/news">
-                    <p>News</p>
-                </Link>
-            </div>
-            <div className = "navigation-link-div">
-                <Link className="navigation-link navigation-link-photos" to="/photos">
-                    <p>Photos</p>
-                </Link>
-            </div>
-            <div className = "navigation-link-div">
-                <Link className="navigation-link navigation-link-contact" to="/contact">
-                    <p>Contact</p>
-                </Link>
-            </div>
-            </div>
+          <div className="navigation-bar-divider">
+            <img
+              className="navigation-divider-image"
+              src="/images/divider.webp"
+              loading="eager"
+            />
+          </div>
+    )
+}
+
+export default function NavigationBar() {
+  const scrollPosition = useScrollPosition();
+  //If the window has scrolled down to this boundary
+  let navBarElement = null;
+  try {
+    navBarElement = document.getElementsByClassName(
+      "navigation-bar-container",
+    )[0];
+    if (scrollPosition > 300) {
+      if (!navBarElement) {
+        throw new Error(
+          "Error in Navigation Bar Scrolling: Cannot find any element by name [ navigation-bar-container ]",
+        );
+      } else {
+        navBarElement.style.animation =
+          "animation-scroll-forwards 0.5s ease-out forwards";
+      }
+    } else {
+      if (!navBarElement) {
+        throw new Error(
+          "Error in Navigation Bar Scrolling: Cannot find any element by name [ navigation-bar-container ]",
+        );
+      } else {
+        navBarElement.style.animation =
+          "animation-scroll-backwards 0.5s ease-in forwards";
+      }
+    }
+  } catch {
+    console.log("Element [navigation-bar-container] not mounted yet");
+  }
+
+  return (
+    <>
+      <link rel="stylesheet" href="styles/navigationBarStyle.css" />
+      <div className="navigation-bar-container">
+        <div className="navigation-bar">
+          <div className="navigation-home">
+            <Link to="/">
+              <img
+                className="navigation-home-image"
+                src="/images/bcLogoBig.webp"
+                loading="eager"
+              />
+            </Link>
+          </div>
+            <Divider/>
+          <div className="navigation-link-div">
+            <Link
+              className="navigation-link navigation-link-tickets"
+              to="/tickets"
+            >
+              <p>Tickets</p>
+            </Link>
+          </div>
+          <Divider/>
+          <div className="navigation-link-div">
+            <Link className="navigation-link navigation-link-news" to="/news">
+              <p>News</p>
+            </Link>
+          </div>
+          <Divider/>
+          <div className="navigation-link-div">
+            <Link
+              className="navigation-link navigation-link-photos"
+              to="/photos"
+            >
+              <p>Photos</p>
+            </Link>
+          </div>
+          <Divider/>
+          <div className="navigation-link-div">
+            <Link
+              className="navigation-link navigation-link-contact"
+              to="/contact"
+            >
+              <p>Contact</p>
+            </Link>
+          </div>
+          <Divider/>
+          <div className="navigation-bar-player">
+            <StickyPlayer />
+          </div>
         </div>
+      </div>
     </>
-    );
+  );
 }

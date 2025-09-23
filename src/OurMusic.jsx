@@ -5,7 +5,7 @@ export default function OurMusic() {
 
   return (
     <div className="our_music_div">
-      <link rel="stylesheet" href="styles/OurMusicStyle.css"/>
+      <link rel="stylesheet" href="styles/OurMusicStyle.css" />
       <h1>Listen</h1>
       <hr />
       <div className="music_content_div">

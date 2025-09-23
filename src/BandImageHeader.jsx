@@ -2,6 +2,7 @@ export default function BandImageHeader() {
   return (
     <div className="header">
       <img
+        id="header_image"
         className="header_image"
         src="/images/backgroundHeader.webp"
         loading="eager"
