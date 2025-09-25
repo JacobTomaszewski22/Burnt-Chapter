@@ -34,8 +34,12 @@ a{
 .sticky_player_iframe{
 }
 
-.header{
+.header_parent{
     position: relative;
+}
+
+.header{
+    position: sticky;
 }
 
 /* The band image style */

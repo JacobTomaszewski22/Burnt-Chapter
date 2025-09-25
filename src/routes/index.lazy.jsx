@@ -4,12 +4,12 @@
     -Contact us
 */
 import { createLazyFileRoute } from "@tanstack/react-router";
-import Biography from "../Biography";
-import OurMusic from "../OurMusic";
-import ContactUs from "../ContactUs";
-import EmailerSignup from "../EmailerSignup";
+import Biography from "../index/Biography";
+import OurMusic from "../index/OurMusic";
+import ContactUs from "../index/ContactUs";
+import EmailerSignup from "../index/EmailerSignup";
 
-import BandImageHeader from "../BandImageHeader";
+import BandImageHeader from "../index/BandImageHeader";
 import NavigationBar from "../NavigationBar";
 
 export const Route = createLazyFileRoute("/")({

@@ -1,15 +1,21 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
+import TicketHeader from '../tickets/TicketHeader';
+import TicketButtons from '../tickets/TicketButtons';
+//The plan is to integrate the bands in town API to allow us to easily
+//poll their database, see https://app.swaggerhub.com/apis-docs/Bandsintown/PublicAPI/3.0.1#/artist%20events/artistEvents
 
 export const Route = createLazyFileRoute('/tickets')({
   component: Tickets,
 });
 
 function Tickets() {
+  //Importing example data to allow us to develop
+  // let json = require('../../exampleAPIData.json');
+  
   return(
     <>
-    <div className='ticket-header'>
-      <h1>Come See The Carnage</h1>
-    </div>
+    <TicketHeader />
+    <TicketButtons />
     </>
   )
 }
