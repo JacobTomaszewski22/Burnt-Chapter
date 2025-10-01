@@ -8,7 +8,7 @@ export const Route = createRootRoute({
     <>
       <Outlet />
       <BandPageFooter />
-      <TanStackRouterDevtools />
+      {/* <TanStackRouterDevtools /> */}
     </>
   ),
 });
