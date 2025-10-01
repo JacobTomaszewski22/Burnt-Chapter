@@ -19,7 +19,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "devAPI": "node --env-file=.env.development.local --watch ./api/server.js",
+    "devAPIemail": "node --env-file=.env.development.local --watch ./api/server.js",
+    "devAPIshows": "node --env-file=.env.development.local --watch ./api/shows.js",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,html}",
     "lint": "eslint",

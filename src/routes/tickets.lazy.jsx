@@ -1,6 +1,8 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import TicketHeader from '../tickets/TicketHeader';
 import TicketButtons from '../tickets/TicketButtons';
+import TicketDates from '../tickets/TicketDates';
+import NavigationBar from '../NavigationBar';
 //The plan is to integrate the bands in town API to allow us to easily
 //poll their database, see https://app.swaggerhub.com/apis-docs/Bandsintown/PublicAPI/3.0.1#/artist%20events/artistEvents
 
@@ -15,7 +17,9 @@ function Tickets() {
   return(
     <>
     <TicketHeader />
+    <NavigationBar />
     <TicketButtons />
+    <TicketDates />
     </>
   )
 }

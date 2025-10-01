@@ -25,6 +25,7 @@
 
 .contact_us_photo{
     max-width: 100%;
+    display: none;
 }
 
 /* Works fine on large tablets, small tablets & phones */

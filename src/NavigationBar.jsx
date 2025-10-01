@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useScrollPosition } from "./useScrollPosition";
 import StickyPlayer from "./StickyPlayer";
+import { capitaliseFirstLetter } from "./generalFunctions";
 
 function Divider() {
     return(
@@ -12,6 +13,22 @@ function Divider() {
             />
           </div>
     )
+}
+
+function NavigationLink(props){
+  return(
+    <>
+    <div className="navigation-link-div">
+            <Link
+              className={`navigation-link navigation-link-${props.LinkString}`}
+              to={`/${props.LinkString}`}
+            >
+              <p>{capitaliseFirstLetter(props.LinkString)}</p>
+            </Link>
+    </div>
+    <Divider/>
+    </>
+  )
 }
 
 export default function NavigationBar() {
@@ -60,39 +77,10 @@ export default function NavigationBar() {
             </Link>
           </div>
             <Divider/>
-          <div className="navigation-link-div">
-            <Link
-              className="navigation-link navigation-link-tickets"
-              to="/tickets"
-            >
-              <p>Tickets</p>
-            </Link>
-          </div>
-          <Divider/>
-          <div className="navigation-link-div">
-            <Link className="navigation-link navigation-link-news" to="/news">
-              <p>News</p>
-            </Link>
-          </div>
-          <Divider/>
-          <div className="navigation-link-div">
-            <Link
-              className="navigation-link navigation-link-photos"
-              to="/photos"
-            >
-              <p>Photos</p>
-            </Link>
-          </div>
-          <Divider/>
-          <div className="navigation-link-div">
-            <Link
-              className="navigation-link navigation-link-contact"
-              to="/contact"
-            >
-              <p>Contact</p>
-            </Link>
-          </div>
-          <Divider/>
+          <NavigationLink LinkString="tickets"/>
+          {/* <NavigationLink LinkString="news"/> */}
+          <NavigationLink LinkString="photos"/>
+          <NavigationLink LinkString="contact"/>
           <div className="navigation-bar-player">
             <StickyPlayer />
           </div>

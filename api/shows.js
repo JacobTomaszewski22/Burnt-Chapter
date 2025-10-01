@@ -28,67 +28,78 @@ app.post("/api/shows", async (request, reply) => {
   try {
     //check if the request has an accessible body
     console.log(
-      `New POST shows Request:\n Header: [${toString(request.headers)}],\n Body: [${toString(request.body)}]`,
+      `New POST shows Request:\n Header: [${JSON.stringify(request.headers)}],\n Body: [${JSON.stringify(request.body)}]`,
     );
 
     //check if the request has an accessible body
     if (!request.body) {
+      console.log("ERR: No Body Found");
       return reply
         .status(400)
         .send({ error: `No body found: [${request.body}]` });
     }
-
+    console.log("Body Found");
     //check if the request has a key of date
     if (!request.body.date) {
+      console.log("ERR: No body.date Found");
       return reply
         .status(400)
         .send({ error: `No key of ['date'] found: [${request.body}]` });
     }
-
+    console.log("Date Found");
     //check if the request date has the acceptible values.
     //TO DO: implement date ranges
-    if (
-      request.body.date != "upcoming" ||
-      request.body.date != "past" ||
-      request.body.date != "all"
-    ) {
+    let date = request.body.date;
+    console.log(`String Date = ${date}`);
+    console.log(`String Date type = ${typeof date}`);
+    if (date != "upcoming" && date != "past" && date != "all") {
+      console.log(
+        `ERR: Body.date must be single string of "upcoming", "past" or "all". Data provided: [${date}]`,
+      );
       return reply.status(400).send({
-        error: `The key of ['date'] MUST be a single string of "upcoming", "past" or "all". Data provided: [${request.body.date}]`,
+        error: `The key of ['date'] MUST be a single string of "upcoming", "past" or "all". Data provided: [${date}]`,
       });
     }
-
+    console.log("Date in correct format");
     //creating the parameters for the API call
     if (!process.env.BANDS_IN_TOWN_API_KEY) {
       throw new Error(
-        "No process.env.BANDS_IN_TOWN_API_KEY found in environment vars",
+        "ERR: No process.env.BANDS_IN_TOWN_API_KEY found in environment vars",
       );
     }
-
-    let bandsInTownBaseURL = `https://rest.bandsintown.com/artists/burnt%20chapter/events?app_id=${process.env.BANDS_IN_TOWN_API_KEY}&date=${request.body.date}`;
+    console.log("API key found");
+    let bandsInTownBaseURL = `https://rest.bandsintown.com/artists/burnt%20chapter/events?app_id=${process.env.BANDS_IN_TOWN_API_KEY}&date=${date}`;
     console.log(`API request sent to: [${bandsInTownBaseURL}]`);
 
-    let bandsInTownAPIResponseString = "";
+    let bandsInTownAPIResponse = null;
     try {
-      bandsInTownAPIResponseString = await fetch(bandsInTownBaseURL);
+      const response = await fetch(bandsInTownBaseURL);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      bandsInTownAPIResponse = await response.json();
       console.log(
-        `\nBands In Town API Response: [${bandsInTownAPIResponseString}]`,
+        `\nBands In Town API Response: [${JSON.stringify(bandsInTownAPIResponse)}]`,
       );
     } catch (error) {
-      throw new Error(error);
+      throw new Error(
+        `Error fetching from Bands in Town API: ${error.message}`,
+      );
     }
     console.log(
-      `\n\n(2) Bands In Town API Response: [${bandsInTownAPIResponseString}]`,
+      `\n\n(2) Bands In Town API Response: [${JSON.stringify(bandsInTownAPIResponse)}]`,
     );
 
-    if (!bandsInTownAPIResponseString) {
-      throw new Error(`Something went wrong with bandsInTownAPIResponseString`);
+    if (!bandsInTownAPIResponse) {
+      throw new Error(`ERR: Something went wrong with bandsInTownAPIResponse`);
     }
 
+    console.log("\n\nDONE\n\n");
     //successful data path
     return reply.status(200).send({
       success: true,
-      message: "Data recieved from bandsInTownAPI",
-      bandsInTownAPIResponseString,
+      message: "Data received from bandsInTownAPI",
+      data: bandsInTownAPIResponse,
     });
   } catch (error) {
     return reply.status(400).send({ error: `Unexpected Error: [${error}]` });

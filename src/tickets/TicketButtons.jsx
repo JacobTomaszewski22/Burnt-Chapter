@@ -8,8 +8,8 @@ export default function TicketButtons() {
                 <iframe src="https://bandsintown.com/artist/id_15581409/track_button?actor_type=ARTIST&background_color=rgba(215,35,35,1)&hover_color=rgba(126,21,21,1)&font=&bitIcon=show&text=FOLLOW&text_color=rgba(255,255,255,1)&locale=en&display_tracker_count=hide&size=large&appId=ID_15581409&affilCode=" 
                 title="newsletter-widget" 
                 className= "follow-button ticket-button"
-                height="50" 
-                width="200" 
+                height="35" 
+                width="120" 
                 scrolling="no" 
                 frameBorder="0" 
                 // style={followButtonStyle}

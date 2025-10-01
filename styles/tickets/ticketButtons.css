@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .request-button{
@@ -19,8 +22,10 @@
 
 .request-button:hover{
     background-color: rgba(126,21,21,1);
-    cursor: pointer
+    cursor: pointer;
+    transform: scale(1.05);
 }
+
 
 .request-button::before{
     content: "🎟️"
@@ -29,6 +34,10 @@
 .follow-button{
     border: 0;
     overflow: "hidden";
+}
 
+.follow-button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
