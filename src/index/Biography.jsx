@@ -41,7 +41,7 @@ export default function Biography() {
             <img
               className="bio_photo"
               src="/images/TomSinging.webp"
-              loading="eager"
+              loading="lazy"
             />
           </div>
         </div>
