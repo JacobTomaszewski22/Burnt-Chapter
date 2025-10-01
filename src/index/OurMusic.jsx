@@ -16,6 +16,7 @@ export default function OurMusic() {
           loop="loop"
           muted="muted"
           className="live_gig_video"
+          loading="lazy" 
         >
           <source src="videos/live_vid_lower_size.mov" type="video/mp4" />
         </video>
