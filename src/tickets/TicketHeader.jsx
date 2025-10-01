@@ -1,4 +1,4 @@
-export default function TicketHeader() {
+export default function TicketHeader(props) {
     return(
     <>
         <link rel="stylesheet" href="styles/tickets/ticketHeader.css" />
@@ -15,7 +15,7 @@ export default function TicketHeader() {
             </div>
             <div className='ticket-header-text-container'>
             <h1 className='ticket-header-text'>
-                COME SEE THE CARNAGE
+                {props.titleText}
             </h1>
             </div>
         </div>

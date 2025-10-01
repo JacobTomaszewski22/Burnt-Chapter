@@ -16,7 +16,7 @@ function Tickets() {
   
   return(
     <>
-    <TicketHeader />
+    <TicketHeader titleText="COME SEE THE CARNAGE"/>
     <NavigationBar />
     <TicketButtons />
     <TicketDates />

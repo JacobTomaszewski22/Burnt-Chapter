@@ -14,8 +14,8 @@ h2{
 
 .ticket-time-period-container{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
     column-gap: 1vw;
     /* margin: 2rem 4%; */
     padding: 2rem 5rem;
@@ -29,12 +29,16 @@ h2{
     
 }
 
+.ticket-time-period-display{
+    flex-grow: 2;
+}
+
 .ticket-time-button{
       background: none;
   border: none;
   padding: 0;
   font: inherit;
-  color: #0066cc; /* Link-like blue color */
+  color: #0066cc;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -46,19 +50,21 @@ h2{
     flex-direction: row;
     gap: 20px;
     justify-content: space-between;
+    max-width: 100vw;
 }
 
 .gig-info-container{
     display:flex;
     flex-direction: column;
     align-content: center;
+    word-wrap: break-word;
 }
 
 .gig-ticket-button-container {
     display: flex;
     align-items: center;
     margin-left: 2rem;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .gig-ticket-button {
@@ -88,5 +94,24 @@ h2{
 .gig-ticket-button-passed:hover{
     background-color: rgb(32, 24, 24);
 }
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 479px) {
+    .gig-container{
+        flex-direction: column;
+    }
+
+    .ticket-time-period-container{
+        padding: 0rem 0rem;
+    }
+
+    .gig-info-container{
+        margin-right: 2vw;
+    }
+}
+
 
 

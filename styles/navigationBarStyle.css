@@ -98,3 +98,30 @@
     display: none;
     flex: 1;
 }
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 479px) {
+    @keyframes animation-scroll-forwards{
+        from {
+            margin: 0px 0px 0px 0px;
+        }
+        to {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+
+    @keyframes animation-scroll-backwards{
+        from {
+            margin: 0px 0px 0px 0px;
+        }
+        to {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    .navigation-bar-container{
+        position: relative;
+    }
+}

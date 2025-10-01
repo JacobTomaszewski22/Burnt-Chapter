@@ -92,6 +92,7 @@ export default function TicketDates() {
             <link rel="stylesheet" href="styles/tickets/gigStyles.css" />
             <hr/>
             <div className="ticket-time-period-container">
+                <h1 className="ticket-time-period-display">{capitaliseFirstLetter(timePeriod)} Shows:</h1>
                 <form className="ticket-time-period-form">
                     <button 
                         className={`ticket-time-button ticket-time-button-upcoming ${timePeriod === 'upcoming' ? 'active' : ''}`}
@@ -112,7 +113,7 @@ export default function TicketDates() {
                         All
                     </button>
                 </form>
-                <h1 className="ticket-time-period-display">{capitaliseFirstLetter(timePeriod)} Shows:</h1>
+                
             </div>
             
             <div className="ticket-gigs">
