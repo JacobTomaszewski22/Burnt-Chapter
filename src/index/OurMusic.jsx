@@ -5,7 +5,7 @@ export default function OurMusic() {
 
   return (
     <div className="our_music_div">
-      <link rel="stylesheet" href="styles/OurMusicStyle.css"/>
+      <link rel="stylesheet" href="styles/OurMusicStyle.css" />
       <h1>Listen</h1>
       <hr />
       <div className="music_content_div">
@@ -16,6 +16,7 @@ export default function OurMusic() {
           loop="loop"
           muted="muted"
           className="live_gig_video"
+          loading="lazy" 
         >
           <source src="videos/live_vid_lower_size.mov" type="video/mp4" />
         </video>

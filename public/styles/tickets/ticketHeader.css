@@ -1,0 +1,40 @@
+.ticket-header-container{
+    position: relative;
+}
+
+.ticket-header{
+    position: relative;
+}
+
+.ticket-header-image-container{
+    position: relative;
+    width: 100%;
+}
+
+.ticket-header-image{
+    max-width: 100%;
+    width: 100%;
+    z-index: -1;
+        
+    height: 100%;
+    object-fit: cover;
+        position: sticky;
+    top: 0;
+}
+
+.ticket-header-text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+h1.ticket-header-text{
+    margin: 0px;
+}

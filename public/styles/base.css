@@ -26,16 +26,20 @@ a{
 
 /* stle controlling the box at the top wich has our band name on it */
 .sticky_player{
-    position: sticky;
+    position: relative;
     top:0px;
-    z-index: 2;
+    z-index: 0;
 }
 
 .sticky_player_iframe{
 }
 
-.header{
+.header_parent{
     position: relative;
+}
+
+.header{
+    position: sticky;
 }
 
 /* The band image style */

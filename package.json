@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
+    "@tanstack/router-devtools": "^1.65.0",
+    "@tanstack/router-plugin": "^1.65.0",
     "@vitejs/plugin-react": "^4.3.1",
     "concurrently": "^9.2.1",
     "eslint": "^9.1.0",
@@ -17,7 +19,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "devAPI": "node --env-file=.env.development.local --watch ./api/server.js",
+    "devAPIemail": "node --env-file=.env.development.local --watch ./api/server.js",
+    "devAPIshows": "node --env-file=.env.development.local --watch ./api/shows.js",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,html}",
     "lint": "eslint",
@@ -41,6 +44,8 @@
     "@fastify/static": "^8.2.0",
     "@fastify/vite": "^8.2.0",
     "@neondatabase/serverless": "^1.0.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@tanstack/react-router": "^1.65.0",
     "@vercel/node": "^5.3.22",
     "cors": "^2.8.5",
     "express": "^5.1.0",

@@ -66,6 +66,7 @@ app.post("/api/email", async (request, reply) => {
       console.error(
         `Error with sending INSERT request to database:\n\tError: [${error}]`,
       );
+      return reply.status(500).send({ success: false, message: error });
     }
 
     //successful data path
