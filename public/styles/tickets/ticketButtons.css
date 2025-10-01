@@ -44,13 +44,13 @@
 
 @media screen and (max-width: 991px) {
     .top-buttons-container{
-        margin-top: 10vh;
+        margin-top: 4vh;
     }
 }
 
 @media screen and (max-width: 767px) {
     .top-buttons-container{
-        margin-top: 10vh;
+        margin-top: 8vh;
     }
 }
 
