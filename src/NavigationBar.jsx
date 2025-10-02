@@ -64,7 +64,7 @@ export default function NavigationBar() {
 
   return (
     <>
-      <link rel="stylesheet" href="styles/navigationBarStyle.css" />
+      {/* <link rel="stylesheet" href="styles/navigationBarStyle.css" /> */}
       <div className="navigation-bar-container">
         <div className="navigation-bar">
           <div className="navigation-home">

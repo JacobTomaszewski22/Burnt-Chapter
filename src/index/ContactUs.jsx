@@ -1,7 +1,7 @@
 export default function ContactUs() {
   return (
     <div className="contact_us_section">
-      <link rel="stylesheet" href="styles/ContactUsStyle.css" />
+      {/* <link rel="stylesheet" href="styles/ContactUsStyle.css" /> */}
       <h1>Contact</h1>
       <hr />
       <div className="contact_us_flex">

@@ -89,7 +89,7 @@ export default function TicketDates() {
 
     return(
         <>
-            <link rel="stylesheet" href="styles/tickets/gigStyles.css" />
+            {/* <link rel="stylesheet" href="styles/tickets/gigStyles.css" /> */}
             <hr/>
             <div className="ticket-time-period-container">
                 <h1 className="ticket-time-period-display">{capitaliseFirstLetter(timePeriod)} Shows:</h1>

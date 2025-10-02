@@ -14,7 +14,7 @@ export default function ImageCarousel() {
                 );
     return(
         <>
-        <link rel="stylesheet" href="styles/photos/imageCarousel.css" />
+        {/* <link rel="stylesheet" href="styles/photos/imageCarousel.css" /> */}
         <div className="image-slide-container">
             <Splide aria-label="BurntChapterImages">
                 {imageReactArray}

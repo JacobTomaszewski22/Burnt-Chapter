@@ -2,7 +2,7 @@ export default function TicketButtons() {
 
     return( 
         <>
-        <link rel="stylesheet" href="styles/tickets/ticketButtons.css" />
+        {/* <link rel="stylesheet" href="styles/tickets/ticketButtons.css" /> */}
         <div className="top-buttons-container">
             <div className = "follow-button-container ticket-button">
                 <iframe src="https://bandsintown.com/artist/id_15581409/track_button?actor_type=ARTIST&background_color=rgba(215,35,35,1)&hover_color=rgba(126,21,21,1)&font=&bitIcon=show&text=FOLLOW&text_color=rgba(255,255,255,1)&locale=en&display_tracker_count=hide&size=large&appId=ID_15581409&affilCode=" 

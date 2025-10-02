@@ -1,7 +1,7 @@
 export default function BandPageFooter() {
   return (
     <div className="footer_div">
-      <link rel="stylesheet" href="styles/bandPageFooterStyle.css" />
+      {/* <link rel="stylesheet" href="styles/bandPageFooterStyle.css" /> */}
       <div className="footer_top_logo_and_links">
         <img className="footer_logo" src="images/TextBC.webp" />
         <div className="footer_links_flex">

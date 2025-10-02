@@ -1,7 +1,7 @@
 export default function TicketHeader(props) {
     return(
     <>
-        <link rel="stylesheet" href="styles/tickets/ticketHeader.css" />
+        {/* <link rel="stylesheet" href="styles/tickets/ticketHeader.css" /> */}
         <div className = "ticket-header-container">
         <div className='ticket-header'>
             <div className='ticket-header-image-container'>
