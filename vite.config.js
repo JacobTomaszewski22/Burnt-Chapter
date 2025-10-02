@@ -16,4 +16,20 @@ export default defineConfig({
     },
   },
   plugins: [TanStackRouterVite(), react()],
+  build: {
+    // CSS optimization
+    cssCodeSplit: true,
+    minify: "esbuild",
+    rollupOptions: {
+      output: {
+        // Separate CSS into chunks for better caching
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith(".css")) {
+            return "assets/css/[name]-[hash][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
+  },
 });
