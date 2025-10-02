@@ -5,7 +5,7 @@ export default function BandImageHeader() {
         <img
           id="header_image"
           className="header_image"
-          src="/images/backgroundHeader.webp"
+          src="/images/backgroundHeader_compressed.webp"
           loading="eager"
         />
 
