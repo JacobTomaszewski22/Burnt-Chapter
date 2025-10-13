@@ -7,17 +7,17 @@ export default function OurMusic() {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
-  //We want to create an observer that will check if the video is in frame. If it is not we dont load it. 
+  //We want to create an observer that will check if the video is in frame. If it is not we dont load it.
   // If it is (or 100 px before it is) then we want to load it. This will reduce the large initial bandwidth
   useEffect(() => {
     const video = videoRef.current;
-    if(!video) return;
+    if (!video) return;
 
     //create an instersection observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if(entry.isIntersecting) {
+          if (entry.isIntersecting) {
             //this is when the video is visible, so we start loading it
             setIsVideoVisible(true);
             setShouldLoadVideo(true);
@@ -28,20 +28,20 @@ export default function OurMusic() {
       },
       {
         //set up to trigger when video is 100px away from being visible
-        rootMargin: '100px',
-        threshold: 0.1
-      }
+        rootMargin: "100px",
+        threshold: 0.1,
+      },
     );
     observer.observe(video);
 
     //cleanup
-    return() => {
+    return () => {
       if (video) observer.unobserve(video);
     };
   }, []);
 
   //video loading and autoplay once loaded
-  useEffect(() =>{
+  useEffect(() => {
     const video = videoRef.current;
     if (!video || !shouldLoadVideo) return;
 
@@ -50,8 +50,8 @@ export default function OurMusic() {
       video.play().catch(console.error);
     };
 
-    video.addEventListener('canplay', handleCanPlay);
-    return() => video.removeEventListener('canplay', handleCanPlay);
+    video.addEventListener("canplay", handleCanPlay);
+    return () => video.removeEventListener("canplay", handleCanPlay);
   }, [shouldLoadVideo]);
 
   return (
@@ -67,10 +67,10 @@ export default function OurMusic() {
           loop
           muted
           className="live_gig_video"
-          loading="lazy" 
-          style = {{
-            backgroundColor: '#1a1a1a', // Placeholder background
-            minHeight: '200px' // Prevent layout shift
+          loading="lazy"
+          style={{
+            backgroundColor: "#1a1a1a", // Placeholder background
+            minHeight: "200px", // Prevent layout shift
           }}
         >
           {shouldLoadVideo && (

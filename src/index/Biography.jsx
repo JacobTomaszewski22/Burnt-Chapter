@@ -1,7 +1,7 @@
 export default function Biography() {
   return (
     <div className="bio">
-      {/* <link rel="stylesheet" href="styles/biographyStyle.css" /> */}
+      <hr />
       <h1>Biography</h1>
       <hr />
       <div className="bio_content_div">

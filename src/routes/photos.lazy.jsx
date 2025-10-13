@@ -1,16 +1,16 @@
-import { createLazyFileRoute } from '@tanstack/react-router'
-import ImageCarousel from '../photos/ImageCarousel'
-import NavigationBar from '../NavigationBar'
+import { createLazyFileRoute } from "@tanstack/react-router";
+import ImageCarousel from "../photos/ImageCarousel";
+import NavigationBar from "../NavigationBar";
 
-export const Route = createLazyFileRoute('/photos')({
+export const Route = createLazyFileRoute("/photos")({
   component: Photos,
-})
+});
 
 function Photos() {
-  return(
+  return (
     <>
-    <NavigationBar />
-    <ImageCarousel/>
+      <NavigationBar />
+      <ImageCarousel />
     </>
-  )
+  );
 }

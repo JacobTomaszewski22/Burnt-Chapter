@@ -110,7 +110,7 @@
 @media screen and (max-width: 479px) {
 /* start of phone styles */
     .bio{
-        margin-top: 23%;
+        margin-top: 10%;
         max-width: 100%;
     }
     .bio_photo_div{
@@ -126,7 +126,7 @@
 @media screen and (width <= 478px) {
 /* start of phone styles */
     .bio{
-        margin-top: 35%;
+        margin-top: 15%;
         max-width: 100%;
 
     }

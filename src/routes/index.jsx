@@ -11,6 +11,7 @@ import EmailerSignup from "../index/EmailerSignup";
 
 import BandImageHeader from "../index/BandImageHeader";
 import NavigationBar from "../NavigationBar";
+import NewMusic from "../index/NewMusic";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -22,6 +23,7 @@ function Index() {
       <BandImageHeader />
       <NavigationBar />
       <EmailerSignup />
+      <NewMusic />
       <Biography />
       <OurMusic />
       <ContactUs />

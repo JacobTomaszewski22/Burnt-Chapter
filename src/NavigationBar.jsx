@@ -4,31 +4,31 @@ import StickyPlayer from "./StickyPlayer";
 import { capitaliseFirstLetter } from "./generalFunctions";
 
 function Divider() {
-    return(
-          <div className="navigation-bar-divider">
-            <img
-              className="navigation-divider-image"
-              src="/images/divider.webp"
-              loading="eager"
-            />
-          </div>
-    )
+  return (
+    <div className="navigation-bar-divider">
+      <img
+        className="navigation-divider-image"
+        src="/images/divider.webp"
+        loading="eager"
+      />
+    </div>
+  );
 }
 
-function NavigationLink(props){
-  return(
+function NavigationLink(props) {
+  return (
     <>
-    <div className="navigation-link-div">
-            <Link
-              className={`navigation-link navigation-link-${props.LinkString}`}
-              to={`/${props.LinkString}`}
-            >
-              <p>{capitaliseFirstLetter(props.LinkString)}</p>
-            </Link>
-    </div>
-    <Divider/>
+      <div className="navigation-link-div">
+        <Link
+          className={`navigation-link navigation-link-${props.LinkString}`}
+          to={`/${props.LinkString}`}
+        >
+          <p>{capitaliseFirstLetter(props.LinkString)}</p>
+        </Link>
+      </div>
+      <Divider />
     </>
-  )
+  );
 }
 
 export default function NavigationBar() {
@@ -76,11 +76,11 @@ export default function NavigationBar() {
               />
             </Link>
           </div>
-            <Divider/>
-          <NavigationLink LinkString="tickets"/>
+          <Divider />
+          <NavigationLink LinkString="tickets" />
           {/* <NavigationLink LinkString="news"/> */}
-          <NavigationLink LinkString="photos"/>
-          <NavigationLink LinkString="contact"/>
+          <NavigationLink LinkString="photos" />
+          <NavigationLink LinkString="contact" />
           <div className="navigation-bar-player">
             <StickyPlayer />
           </div>

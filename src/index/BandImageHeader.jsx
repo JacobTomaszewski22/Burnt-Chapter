@@ -1,6 +1,6 @@
 export default function BandImageHeader() {
   return (
-    <div className = "header_parent">
+    <div className="header_parent">
       <div className="header">
         <img
           id="header_image"
@@ -10,7 +10,11 @@ export default function BandImageHeader() {
         />
 
         <div className="header_div">
-          <img className="band_logo" src="/images/TextBC.webp" loading="eager" />
+          <img
+            className="band_logo"
+            src="/images/TextBC.webp"
+            loading="eager"
+          />
         </div>
       </div>
     </div>

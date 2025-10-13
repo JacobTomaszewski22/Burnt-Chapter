@@ -1,0 +1,116 @@
+/* .new-music-total-container{
+    max-width: 98%;
+}
+
+.new-music-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.mew-music-image-container{
+    max-width: 20vw;
+    margin: 2% 5%;
+}
+
+.new-music-writeup{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    text-wrap: balance;
+    word-break: break-word;
+}
+
+.new-music-song-title{
+    margin-top: 0px;
+} */
+
+/* NewMusic.jsx styles */
+
+.new-music-total-container{
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+  
+  .new-music-top-title{
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin: 8px 0 16px;
+    font-weight: 600;
+  }
+  
+  .new-music-container{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Note: class is spelled 'mew-music-image-container' in NewMusic.jsx */
+  .mew-music-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .new-music-image{
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  
+  .new-music-writeup{
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .new-music-song-title{
+    margin: 0 0 8px 0;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: x-large;
+  }
+  
+  .new-music-presave-link-container{
+    margin-top: 12px;
+  }
+  
+  .new-music-presave-link{
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #111;
+    background: #f5f5f5;
+    transition: transform 120ms ease, background-color 120ms ease, color 120ms ease;
+    word-break: break-all; /* keep long URL from overflowing */
+  }
+  
+  .new-music-presave-link:hover{
+    transform: translateY(-1px);
+    background: #fff;
+    color: #000;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px){
+    .new-music-container{
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  
+    .new-music-image{
+      max-width: 640px;
+    }
+  }
+  
+  /* Reduced motion accessibility */
+  @media (prefers-reduced-motion: reduce){
+    .new-music-presave-link{
+      transition: none;
+    }
+  }

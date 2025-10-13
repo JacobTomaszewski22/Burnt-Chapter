@@ -11,13 +11,13 @@ export default function ContactUs() {
             <a href="burntchapt3r@gmail.com">burntchapt3r@gmail.com</a>
           </h4>
         </div>
-        <div className="contact_us_photo_div">
+        {/* <div className="contact_us_photo_div">
           <img
             className="contact_us_photo"
             src="images/all_together_2_compressed.webp"
             loading="lazy"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
