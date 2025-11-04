@@ -10,7 +10,7 @@ export default function EmailerSignup() {
   let email = "";
   async function addRecordToDB(email) {
     try {
-      console.log(JSON.stringify({ email }));
+      // console.log(JSON.stringify({ email }));
       const emailObject = {
         email: email,
       };
@@ -22,13 +22,13 @@ export default function EmailerSignup() {
         },
         body: JSON.stringify(emailObject),
       });
-      console.log(response.toString());
+      // console.log(response.toString());
       const responseData = response.json();
       if (!response.ok) {
         throw new Error(responseData.error || "Unknown error");
       }
 
-      console.log(responseData);
+      // console.log(responseData);
       return true;
     } catch (error) {
       throw new Error(

@@ -7,15 +7,15 @@ export default function TicketDates() {
   const [timePeriod, setTimePeriod] = useState("all");
   const [gigObjects, setGigObjects] = useState(["Loading"]);
 
-  console.log(`Outside Function: ${timePeriod}`);
+  // console.log(`Outside Function: ${timePeriod}`);
 
   //using a use effect to pull the API data, and set our gig objects to the data returned
   useEffect(() => {
-    console.log(`Inside Effect: ${timePeriod}`);
+    // console.log(`Inside Effect: ${timePeriod}`);
     const fetchData = async () => {
       try {
         const gigResponse = await fetchTicketInfo(timePeriod);
-        console.log(JSON.stringify(gigResponse));
+        // console.log(JSON.stringify(gigResponse));
         if (gigResponse && gigResponse.success === true) {
           setGigObjects(gigResponse.data);
         } else {
@@ -32,11 +32,11 @@ export default function TicketDates() {
   //first we need to get the info from the API
   async function fetchTicketInfo(timePeriod) {
     try {
-      console.log(`Inside Function: ${timePeriod}`);
+      // console.log(`Inside Function: ${timePeriod}`);
       const request = {
         date: timePeriod,
       };
-      console.log(`Inside Function: ${JSON.stringify(request)}`);
+      // console.log(`Inside Function: ${JSON.stringify(request)}`);
       const response = await fetch(`/api/shows`, {
         method: "POST",
         headers: {
