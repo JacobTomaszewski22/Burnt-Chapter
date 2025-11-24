@@ -9,7 +9,7 @@ export default function TicketHeader(props) {
             <img
               id="ticket-header-image"
               className="ticket-header-image"
-              src="/images/topBannerTickets.webp"
+              src="/images/newSecondHeader.webp"
               loading="eager"
             />
           </div>

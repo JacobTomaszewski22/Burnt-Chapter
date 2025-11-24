@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 export default function ImageCarousel() {
-  const images = Array.from(Array(13).keys());
+  const images = Array.from(Array(11).keys());
   const imageReactArray = images.map((image) => (
     <SplideSlide key={image.toString()}>
       <img
