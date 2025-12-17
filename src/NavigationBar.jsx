@@ -81,9 +81,10 @@ export default function NavigationBar() {
           {/* <NavigationLink LinkString="news"/> */}
           <NavigationLink LinkString="photos" />
           <NavigationLink LinkString="contact" />
-          <div className="navigation-bar-player">
+          {/* <NavigationLink LinkString="EPK" /> */}
+          {/* <div className="navigation-bar-player">
             <StickyPlayer />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
