@@ -1,4 +1,8 @@
-@import "../public/styles/base.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import "../public/styles/base.css";
 @import "../public/styles/colorScheme.css";
 @import "../public/styles/bandPageFooterStyle.css";
 @import "../public/styles/newMusic.css";
@@ -11,3 +15,4 @@
 @import "../public/styles/tickets/ticketButtons.css";
 @import "../public/styles/tickets/ticketHeader.css";
 @import "../public/styles/photos/imageCarousel.css";
+@import "../public/styles/cookieConsentScheme.css"; */

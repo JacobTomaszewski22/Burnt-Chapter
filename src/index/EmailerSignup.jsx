@@ -52,10 +52,10 @@ export default function EmailerSignup() {
   //if there is none here
   if (!localStorage.getItem("enteredEmail")) {
     return (
-      <div className="email_signup_container" id="email_signup_container">
-        <div className="email_signup_window">
+      <div className="email_signup_container fixed top-0 left-0 h-full w-screen flex justify-center items-center px-[10px] box-border z-[3] bg-[rgba(0,0,0,0.5)]" id="email_signup_container">
+        <div className="email_signup_window relative p-5 max-w-[400px] w-full rounded bg-[rgb(17,15,15)]">
           <button
-            className="email_Signup_exit"
+            className="email_Signup_exit absolute right-[10px] top-0 bg-transparent border-0 cursor-pointer text-[xxx-large] text-[aliceblue] hover:text-[rgb(215,35,35)]"
             onClick={(event) => {
               event.preventDefault();
               exitEmailSignup();
@@ -65,7 +65,7 @@ export default function EmailerSignup() {
           </button>
 
           <form
-            className="email_signup_form"
+            className="email_signup_form flex flex-col gap-[15px] p-2.5"
             onSubmit={(event) => {
               event.preventDefault();
               //Maybe take out into function
@@ -98,9 +98,10 @@ export default function EmailerSignup() {
               id="email_input"
               placeholder="Enter your email"
               title="Invalid email address"
+              className="p-2 w-full box-border"
             />
-            <button type="submit">Sign Up</button>
-            <p className="email_footer">
+            <button type="submit" className="p-2 cursor-pointer">Sign Up</button>
+            <p className="email_footer text-[xx-small]">
               By signing up you agree to recieve email communications from Burnt
               Chapter
             </p>

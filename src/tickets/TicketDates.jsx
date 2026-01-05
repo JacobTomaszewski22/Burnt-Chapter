@@ -87,27 +87,27 @@ export default function TicketDates() {
     <>
       {/* <link rel="stylesheet" href="styles/tickets/gigStyles.css" /> */}
       <hr />
-      <div className="ticket-time-period-container">
-        <h1 className="ticket-time-period-display">
+      <div className="ticket-time-period-container flex flex-row justify-start gap-[1vw] p-8 px-20 mobile:p-0">
+        <h1 className="ticket-time-period-display flex-grow-[2] m-0 text-[1.8rem]">
           {capitaliseFirstLetter(timePeriod)} Shows:
         </h1>
-        <form className="ticket-time-period-form">
+        <form className="ticket-time-period-form flex justify-center self-center gap-[1vw]">
           <button
-            className={`ticket-time-button ticket-time-button-upcoming ${timePeriod === "upcoming" ? "active" : ""}`}
+            className={`ticket-time-button ticket-time-button-upcoming bg-transparent border-0 p-0 cursor-pointer underline text-[#0066cc] ${timePeriod === "upcoming" ? "active" : ""}`}
             type="button"
             onClick={() => setTimePeriod("upcoming")}
           >
             Upcoming
           </button>
           <button
-            className={`ticket-time-button ticket-time-button-past ${timePeriod === "past" ? "active" : ""}`}
+            className={`ticket-time-button ticket-time-button-past bg-transparent border-0 p-0 cursor-pointer underline text-[#0066cc] ${timePeriod === "past" ? "active" : ""}`}
             type="button"
             onClick={() => setTimePeriod("past")}
           >
             Past
           </button>
           <button
-            className={`ticket-time-button ticket-time-button-all ${timePeriod === "all" ? "active" : ""}`}
+            className={`ticket-time-button ticket-time-button-all bg-transparent border-0 p-0 cursor-pointer underline text-[#0066cc] ${timePeriod === "all" ? "active" : ""}`}
             type="button"
             onClick={() => setTimePeriod("all")}
           >

@@ -2,12 +2,12 @@ export default function TicketButtons() {
   return (
     <>
       {/* <link rel="stylesheet" href="styles/tickets/ticketButtons.css" /> */}
-      <div className="top-buttons-container">
+      <div className="top-buttons-container relative flex flex-row justify-center gap-[5vw] mt-[1vh] mb-[1vh] tablet-lg:mt-[4vh] tablet-sm:mt-[8vh] mobile:mt-[10vh]">
         <div className="follow-button-container ticket-button">
           <iframe
             src="https://bandsintown.com/artist/id_15581409/track_button?actor_type=ARTIST&background_color=rgba(215,35,35,1)&hover_color=rgba(126,21,21,1)&font=&bitIcon=show&text=FOLLOW&text_color=rgba(255,255,255,1)&locale=en&display_tracker_count=hide&size=large&appId=ID_15581409&affilCode="
             title="newsletter-widget"
-            className="follow-button ticket-button"
+            className="follow-button ticket-button border-0 hover:cursor-pointer hover:scale-105"
             height="35"
             width="120"
             scrolling="no"
@@ -21,7 +21,7 @@ export default function TicketButtons() {
             <input
               type="submit"
               value="🎟️ Request a Show"
-              className="request-button ticket-button"
+              className="request-button ticket-button p-2.5 rounded-md text-white border-0 h-[37px] w-[200px] bg-[rgba(215,35,35,1)] hover:bg-[rgba(126,21,21,1)] hover:cursor-pointer hover:scale-105"
             />
           </form>
         </div>

@@ -5,9 +5,9 @@ import { capitaliseFirstLetter } from "./generalFunctions";
 
 function Divider() {
   return (
-    <div className="navigation-bar-divider">
+    <div className="navigation-bar-divider max-h-[5vh]">
       <img
-        className="navigation-divider-image"
+        className="navigation-divider-image max-h-[5vh]"
         src="/images/divider.webp"
         loading="eager"
       />
@@ -18,9 +18,9 @@ function Divider() {
 function NavigationLink(props) {
   return (
     <>
-      <div className="navigation-link-div">
+      <div className="navigation-link-div text-[100%] h-full flex items-center text-center w-[8vw] tablet-lg:w-[20vw] mobile:w-[20vw] hover:bg-[rgb(46,40,40)] hover:cursor-pointer hover:text-[rgb(215,35,35)]">
         <Link
-          className={`navigation-link navigation-link-${props.LinkString}`}
+          className={`navigation-link navigation-link-${props.LinkString} no-underline block w-full h-full hover:text-[rgb(215,35,35)] hover:cursor-pointer`}
           to={`/${props.LinkString}`}
         >
           <p>{capitaliseFirstLetter(props.LinkString)}</p>
@@ -65,12 +65,12 @@ export default function NavigationBar() {
   return (
     <>
       {/* <link rel="stylesheet" href="styles/navigationBarStyle.css" /> */}
-      <div className="navigation-bar-container">
-        <div className="navigation-bar">
-          <div className="navigation-home">
+      <div className="navigation-bar-container sticky top-0 z-[2] max-w-full max-h-[8vh] bg-[rgb(17,15,15)] mobile:relative">
+        <div className="navigation-bar flex max-w-full flex-row flex-wrap justify-start items-center h-full gap-0 pt-[3px] bg-[rgb(17,15,15)]">
+          <div className="navigation-home max-h-[5vh] pl-[6vw] pr-[3vw] hover:cursor-pointer hover:scale-110">
             <Link to="/">
               <img
-                className="navigation-home-image"
+                className="navigation-home-image max-h-[5vh] p-0"
                 src="/images/bcLogoBig.webp"
                 loading="eager"
               />

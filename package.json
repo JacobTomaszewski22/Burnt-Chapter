@@ -7,12 +7,15 @@
     "@tanstack/router-devtools": "^1.65.0",
     "@tanstack/router-plugin": "^1.65.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.23",
     "concurrently": "^9.2.1",
     "eslint": "^9.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.9.0",
+    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.18",
     "ts-node": "^10.9.2",
     "vite": "^7.1.5"
   },
@@ -46,8 +49,9 @@
     "@fastify/vite": "^8.2.0",
     "@neondatabase/serverless": "^1.0.1",
     "@splidejs/react-splide": "^0.7.12",
+    "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "^1.65.0",
-    "@vercel/node": "^5.3.22",
+    "@vercel/node": "^2.3.0",
     "@vercel/speed-insights": "^1.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
@@ -55,6 +59,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-spotify-embed": "^2.0.4",
-    "vercel": "^25.2.0"
+    "vercel": "^41.0.2"
   }
 }

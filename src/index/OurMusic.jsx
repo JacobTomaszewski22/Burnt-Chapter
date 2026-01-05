@@ -55,18 +55,18 @@ export default function OurMusic() {
   }, [shouldLoadVideo]);
 
   return (
-    <div className="our_music_div">
+    <div className="our_music_div relative mt-[1%] max-w-[98%] mobile:max-w-full">
       {/* <link rel="stylesheet" href="styles/OurMusicStyle.css" /> */}
       <h1>Listen</h1>
       <hr />
-      <div className="music_content_div">
+      <div className="music_content_div relative flex flex-row items-start justify-left gap-[1%] tablet-sm:flex-col-reverse">
         <video
           ref={videoRef}
           width="50%"
           height="100%"
           loop
           muted
-          className="live_gig_video"
+          className="live_gig_video w-[25%] m-[1%] tablet-lg:self-center tablet-sm:h-0 tablet-sm:invisible mobile:w-full"
           loading="lazy"
           style={{
             backgroundColor: "#1a1a1a", // Placeholder background
@@ -77,16 +77,16 @@ export default function OurMusic() {
             <source src="videos/live_vid_lower_size.mov" type="video/mp4" />
           )}
         </video>
-        <div className="our_music_right_div">
+        <div className="our_music_right_div flex flex-col w-full">
           <Spotify
-            className="spotify_player"
+            className="spotify_player w-[99%] tablet-sm:w-full mobile:w-full"
             link="https://open.spotify.com/artist/1ggfLpkzXNWzHIR8kUno4q?si=KsARGwz1QEWtEGRuMLgaow"
           />
-          <div className="review_2">
-            <h2 className="review_big review_2_big">
+          <div className="review_2 max-w-[98%]">
+            <h2 className="review_big review_2_big text-[80px] mb-0 tablet-lg:mt-[1%] tablet-lg:text-[8vh] mobile:mt-[2%] mobile:text-[9vh]">
               "DEFINITELY A BAND TO KEEP AN EYE OUT FOR."
             </h2>
-            <div className="review_small review_2_small">
+            <div className="review_small review_2_small relative top-0 font-extralight left-[20%] text-right max-w-full left-0">
               - Loud Enough Magazine
             </div>
           </div>

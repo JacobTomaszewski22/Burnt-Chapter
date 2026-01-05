@@ -3,7 +3,7 @@
  */
 function CookieConsentBannerComponent() {
   return (
-    <div className="cookie_consent_container" id="cookie_consent_container">
+    <div className="cookie_consent_container fixed top-[80vh] left-0 h-[20vh] w-full bg-[rgb(243,241,216)] z-[4]" id="cookie_consent_container">
       <div className="cookie_consent_window" id="cookie_consent_window">
         <h2>💀 SUBMIT TO THE COOKIES 💀</h2>
         <p>
