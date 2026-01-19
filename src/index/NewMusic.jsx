@@ -14,14 +14,26 @@ export default function NewMusic() {
         </div>
         <div className="new-music-writeup">
           <h3 className="new-music-song-title">Scorched</h3>
+          <p>We have now released our first EP: Scorched</p>
           <p>
-            We have now released our first EP: Scorched
-          </p>
-          <p>
-            This EP is the culmination of our first year of writing, capturing the essence of Burnt Chapter. It contains four of our released tracks, and one previously unreleased track. This is now a complete artistic product and how we always intended for our listeners to hear the tracks. We hope you enjoy listening to it as much as we enjoyed creating it.
+            This EP is the culmination of our first year of writing, capturing
+            the essence of Burnt Chapter. It contains four of our released
+            tracks, and one previously unreleased track. This is now a complete
+            artistic product and how we always intended for our listeners to
+            hear the tracks. We hope you enjoy listening to it as much as we
+            enjoyed creating it.
           </p>
           <div className="new-music-presave-link-container">
-          <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/album/3xaomAWtR3PqRum0aIIBmr?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe
+              data-testid="embed-iframe"
+              src="https://open.spotify.com/embed/album/3xaomAWtR3PqRum0aIIBmr?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>

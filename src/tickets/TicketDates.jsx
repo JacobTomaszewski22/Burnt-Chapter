@@ -32,11 +32,9 @@ export default function TicketDates() {
   //first we need to get the info from the API
   async function fetchTicketInfo(timePeriod) {
     try {
-      // console.log(`Inside Function: ${timePeriod}`);
       const request = {
         date: timePeriod,
       };
-      // console.log(`Inside Function: ${JSON.stringify(request)}`);
       const response = await fetch(`/api/shows`, {
         method: "POST",
         headers: {
@@ -50,7 +48,6 @@ export default function TicketDates() {
         throw new Error(responseData.error || "Unknown error");
       }
       //We need to add a datetime object to each item in the array
-      // console.log(JSON.stringify(responseData));
       for (let element of responseData.data) {
         element.dateTimeUnixFormat = Date.parse(element.datetime);
         console.log(element.dateTimeUnixFormat);
@@ -85,7 +82,6 @@ export default function TicketDates() {
 
   return (
     <>
-      {/* <link rel="stylesheet" href="styles/tickets/gigStyles.css" /> */}
       <hr />
       <div className="ticket-time-period-container">
         <h1 className="ticket-time-period-display">

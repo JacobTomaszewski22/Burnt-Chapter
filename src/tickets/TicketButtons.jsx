@@ -12,8 +12,6 @@ export default function TicketButtons() {
             width="120"
             scrolling="no"
             frameBorder="0"
-            // style={followButtonStyle}
-            // allowTransparency="true"
           ></iframe>
         </div>
         <div className="request-button-container ">

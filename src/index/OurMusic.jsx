@@ -28,7 +28,7 @@ export default function OurMusic() {
       },
       {
         //set up to trigger when video is 100px away from being visible
-        rootMargin: "100px",
+        rootMargin: "-100px",
         threshold: 0.1,
       },
     );
@@ -56,7 +56,6 @@ export default function OurMusic() {
 
   return (
     <div className="our_music_div">
-      {/* <link rel="stylesheet" href="styles/OurMusicStyle.css" /> */}
       <h1>Listen</h1>
       <hr />
       <div className="music_content_div">

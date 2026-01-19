@@ -24,7 +24,7 @@ app.register(fastifyStatic, {
 //Setting up the post root
 app.post("/api/email", async (request, reply) => {
   try {
-    //TO DO: Should make this work \/
+
     console.log(
       `New POST Request:\n Header: [${toString(request.headers)}],\n Body: [${toString(request.body)}]`,
     );
