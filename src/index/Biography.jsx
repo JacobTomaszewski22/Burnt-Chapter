@@ -6,7 +6,7 @@ export default function Biography() {
       <hr />
       <div className="bio_content_div">
         <div className="bio_content_subgrid">
-          <ul>
+          <ul className="bio_list">
             <li className="bio_writing_list">Raw.</li>
             <li className="bio_writing_list">Heavy.</li>
             <li className="bio_writing_list">Groove.</li>

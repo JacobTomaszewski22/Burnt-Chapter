@@ -1,37 +1,40 @@
 /* === Contact Us Flex Box === */
-.contact_us_section{
+.contact_us_section {
     max-width: 98%;
 }
-.contact_us_flex{
-    display:flex;
+
+.contact_us_flex {
+    display: flex;
     flex-direction: column;
     /* gap: 40%; */
     justify-content: center;
 }
 
-.contact_us_writing{
+.contact_us_writing {
     margin-top: 1%;
     margin-left: 4%;
     margin-bottom: 1%;
 }
 
-.contact_us_photo_div{
+.contact_us_photo_div {
     /* margin-left:52%; */
     max-width: 100%;
     margin-left: 2%;
-    margin-top:1%;
-    margin-right:0%;
+    margin-top: 1%;
+    margin-right: 0%;
 }
 
-.contact_us_photo{
+.contact_us_photo {
     max-width: 100%;
     display: none;
 }
 
 /* Works fine on large tablets, small tablets & phones */
 @media screen and (max-width: 479px) {
-/* start of phone styles */
-    .contact_us_section{
+
+    /* start of phone styles */
+    .contact_us_section {
         max-width: 100%;
+        padding: 5px;
     }
 }

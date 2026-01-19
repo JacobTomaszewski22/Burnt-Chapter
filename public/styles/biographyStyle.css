@@ -1,25 +1,26 @@
 @import "colorScheme.css";
+
 /* Bio style sheet */
 /* Desktop first approach */
 /* start of desktop styles */
-.bio{
+.bio {
     position: relative;
     margin-top: 2%;
     font-size: larger;
     max-width: 98%;
     box-sizing: border-box;
-    
+
 }
 
-.bio_content_div{
+.bio_content_div {
     display: flex;
     flex-direction: row;
     grid-template-columns: repeat(2, 1fr);
-    align-items:center;
+    align-items: center;
     gap: 1%;
 }
 
-.bio_content_subgrid{
+.bio_content_subgrid {
     display: flex;
     flex-direction: column;
 }
@@ -28,12 +29,12 @@
 } */
 
 
-.bio_writing_list{
-    position:relative;
+.bio_writing_list {
+    position: relative;
     /* top: 40px; */
     font-size: xxx-large;
     font-weight: 100;
-    text-align:right;
+    text-align: right;
     /* margin-right: 1%; */
     /* right: 53%; */
     list-style-type: none;
@@ -41,120 +42,146 @@
     grid-row: 1;
 }
 
-.bio_writing{
+.bio_writing {
     position: relative;
     font-size: x-large;
     margin-left: 2%;
-    margin-top: 8%;
+    margin-top: 0px;
 }
 
-.review_1{
+.review_1 {
     margin-top: 5%;
 }
 
-.bio_photo_div{
+.bio_photo_div {
     max-width: 50%;
     grid-column-start: 2;
 }
 
-.bio_photo{
+.bio_photo {
     max-width: 98%;
     margin: 1%;
+}
+
+.bio_list {
+    margin-bottom: 0px;
 }
 
 
 
 @media screen and (max-width: 991px) {
-/* start of large tablet styles */
-    .bio{
+
+    /* start of large tablet styles */
+    .bio {
         margin-top: 3%;
     }
 
-    .bio_writing{
+    .bio_writing {
         margin-top: 4%;
     }
 
-    .review_1{
+    .review_1 {
         margin-top: 0%;
     }
 
-    .review_1_big{
+    .review_1_big {
         margin-top: 5%;
     }
 }
 
 @media screen and (max-width: 767px) {
-/* start of medium tablet styles */
-    .bio{
+
+    /* start of medium tablet styles */
+    .bio {
         margin-top: 8%;
     }
 
-    .bio_content_div{
+    .bio_content_div {
         flex-direction: column;
     }
 
-    .bio_writing{
+    .bio_writing {
         margin-top: 2%;
     }
 
-    .review_1{
+    .review_1 {
         margin-top: 0%;
     }
 
-    .bio_photo_div{
+    .bio_photo_div {
         max-width: 60%;
     }
 
 }
 
 @media screen and (max-width: 479px) {
-/* start of phone styles */
-    .bio{
+
+    /* start of phone styles */
+    .bio {
         margin-top: 10%;
         max-width: 100%;
     }
-    .bio_photo_div{
+
+    .bio_photo_div {
         max-width: 98%;
     }
 
-    .review_1_small{
+    .review_1_small {
         left: 0%;
         text-align: right;
     }
 }
 
-@media screen and (width <= 478px) {
-/* start of phone styles */
-    .bio{
+@media screen and (max-width: 479px) {
+
+    /* start of phone styles */
+    .bio {
         margin-top: 15%;
         max-width: 100%;
-
+        padding: 0px 5px;
     }
 
-    .bio_writing{
-        padding-left: 4%;
-        margin-top: 8%;
+    .bio_writing {
+        /* padding-left: 4%; */
+        /* padding-top: 8%; */
+        /* padding-top: 10px; */
+        margin-top: 0px;
         font-size: large;
         width: 92%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens:auto;
+        /* word-wrap: break-word;
+        overflow-wrap: break-word; */
+        hyphens: auto;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 
-    .bio_photo_div{
+    .bio_photo_div {
         max-width: 98%;
     }
 
-    .review_1_small{
+    .review_1_small {
         left: 0%;
         text-align: right;
+        padding-right: 8px;
     }
 
-    .review_1_big{
+    .review_1_big {
         padding-left: 4%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens:auto;
-        font-size: 9vh;
+        padding-right: 5px;
+        /* word-wrap: break-word;
+        overflow-wrap: break-word; */
+        hyphens: auto;
+        font-size: 4rem;
+        text-align: right;
+        max-width: 100%;
+        margin-top: 0px;
+    }
+
+    .review_1 {
+        padding-bottom: 10px;
+    }
+
+    .bio_content_subgrid {
+        width: 100%;
     }
 }

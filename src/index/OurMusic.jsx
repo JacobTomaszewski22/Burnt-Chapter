@@ -6,6 +6,7 @@ export default function OurMusic() {
   const videoRef = useRef(null);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const isMobile = window.innerWidth < 768;
 
   //We want to create an observer that will check if the video is in frame. If it is not we dont load it.
   // If it is (or 100 px before it is) then we want to load it. This will reduce the large initial bandwidth
@@ -65,11 +66,12 @@ export default function OurMusic() {
           height="100%"
           loop
           muted
+          playsInline
           className="live_gig_video"
           loading="lazy"
           style={{
             backgroundColor: "#1a1a1a", // Placeholder background
-            minHeight: "200px", // Prevent layout shift
+            minHeight: isMobile ? "0px" : "200px", // Prevent layout shift
           }}
         >
           {shouldLoadVideo && (
