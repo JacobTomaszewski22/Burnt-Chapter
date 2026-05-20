@@ -8,33 +8,29 @@ export default function NewMusic() {
         <div className="mew-music-image-container">
           <img
             className="new-music-image"
-            src="/images/scorched.webp"
+            src="/images/OneLess.webp"
             loading="lazy"
           />
         </div>
         <div className="new-music-writeup">
-          <h3 className="new-music-song-title">Scorched</h3>
-          <p>We have now released our first EP: Scorched</p>
+          <h3 className="new-music-song-title">One Less Parasite</h3>
           <p>
-            This EP is the culmination of our first year of writing, capturing
-            the essence of Burnt Chapter. It contains four of our released
-            tracks, and one previously unreleased track. This is now a complete
-            artistic product and how we always intended for our listeners to
-            hear the tracks. We hope you enjoy listening to it as much as we
-            enjoyed creating it.
+            It’s been a while. We’ve been in the studio cooking up some nasty Burnt Chapter goodness. This is the first single off of our new EP. One Less Parasite has groovy heaviness with a killer breakdown. This is also our first music video and we couldn’t be happier. It drops on the 28th of May. Check it out:
           </p>
-          <div className="new-music-presave-link-container">
+          <a href="https://distrokid.com/hyperfollow/burntchapter/one-less-parasite/">https://distrokid.com/hyperfollow/burntchapter/one-less-parasite/</a>
+          {/* <div className="new-music-presave-link-container">
             <iframe
               data-testid="embed-iframe"
-              src="https://open.spotify.com/embed/album/3xaomAWtR3PqRum0aIIBmr?utm_source=generator&theme=0"
+              src="https://distrokid.com/hyperfollow/burntchapter/one-less-parasite/"
               width="100%"
               height="352"
               frameBorder="0"
               allowFullScreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
-            ></iframe>
-          </div>
+            ></iframe> *
+
+          </div> */}
         </div>
       </div>
     </div>

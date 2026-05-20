@@ -34,6 +34,25 @@ export default function EmailerSignup() {
     }
   }
 
+  function onEmailerSubmit() {
+    //find which event.target[0,1,2,3...].value it is
+    let index = 0;
+    for (index; index < event.target.length; index++) {
+      if (event.target[index].id == "email_input") {
+        break;
+      }
+    }
+    if (index == event.target.length) {
+      throw "Error: EmailerSignup. No email_input id can be found in event.target";
+    }
+    email = event.target[index].value;
+    localStorage.setItem("enteredEmail", "true");
+    //Add email to database
+    addRecordToDB(email);
+    //Exit the signup
+    exitEmailSignup();
+  }
+
   function exitEmailSignup() {
     //function to exit the email signup
     const emailSignupContainer = document.getElementById(
@@ -65,26 +84,7 @@ export default function EmailerSignup() {
             className="email_signup_form"
             onSubmit={(event) => {
               event.preventDefault();
-              //Maybe take out into function
-              //find which event.target[0,1,2,3...].value it is
-              let index = 0;
-              for (index; index < event.target.length; index++) {
-                if (event.target[index].id == "email_input") {
-                  break;
-                }
-              }
-
-              if (index == event.target.length) {
-                throw "Error: EmailerSignup. No email_input id can be found in event.target";
-              }
-
-              email = event.target[index].value;
-              //add debugger to log email?
-              localStorage.setItem("enteredEmail", "true");
-              //Add email to database
-              addRecordToDB(email);
-              //Exit the signup
-              exitEmailSignup();
+              onEmailerSubmit();
             }}
           >
             <h2>&#128128;Never Miss A Show!&#128128;</h2>
