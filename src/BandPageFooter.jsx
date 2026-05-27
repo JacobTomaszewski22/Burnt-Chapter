@@ -18,7 +18,7 @@ export default function BandPageFooter() {
           </a>
           <a
             className="footer_link"
-            href="https://www.instagram.com/burntchapterband/"
+            href="https://www.instagram.com/burntchapter/"
           >
             <img
               src="images/link_icons/Instagram_logo_2022.svg"
