@@ -1,0 +1,97 @@
+
+<style>
+.wrap { padding: 2rem 0; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.previews { display: flex; gap: 48px; align-items: center; justify-content: center; }
+.preview-box { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.canvas { background: #333; border-radius: 8px; padding: 24px 32px; }
+.lbl { font-size: 12px; color: var(--color-text-secondary); }
+.controls { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.controls label { font-size: 13px; color: var(--color-text-secondary); }
+.btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+button { font-size: 13px; padding: 6px 16px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); background: none; color: var(--color-text-primary); cursor: pointer; }
+button:hover { background: var(--color-background-secondary); }
+.swatch { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; display: inline-block; }
+.swatch.active { border-color: var(--color-text-primary); }
+</style>
+
+<div class="wrap">
+  <div class="previews">
+    <div class="preview-box">
+      <div class="canvas">
+        <svg id="svg-left" width="50" height="60" viewBox="0 0 50 60" xmlns="http://www.w3.org/2000/svg">
+          <polyline id="left-line" points="38,4 12,30 38,56" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="lbl">Left</span>
+    </div>
+    <div class="preview-box">
+      <div class="canvas">
+        <svg id="svg-right" width="50" height="60" viewBox="0 0 50 60" xmlns="http://www.w3.org/2000/svg">
+          <polyline id="right-line" points="12,4 38,30 12,56" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="lbl">Right</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <label>Thickness</label>
+    <input type="range" min="1" max="10" value="4" step="1" id="thickness">
+    <span id="thickVal" style="font-size:13px; min-width:28px; color:var(--color-text-primary);">4px</span>
+
+    <label>Colour</label>
+    <div class="swatch active" style="background:#ffffff;" data-color="#ffffff"></div>
+    <div class="swatch" style="background:#111111; border:1px solid #aaa;" data-color="#111111"></div>
+    <div class="swatch" style="background:#cc2200;" data-color="#cc2200"></div>
+    <div class="swatch" style="background:#e8b84b;" data-color="#e8b84b"></div>
+  </div>
+
+  <div class="btns">
+    <button onclick="dl('svg-left','arrow-left.svg')">Download left ↓</button>
+    <button onclick="dl('svg-right','arrow-right.svg')">Download right ↓</button>
+    <button onclick="copyCode()">Copy both as HTML</button>
+  </div>
+</div>
+
+<script>
+let color = '#ffffff';
+let thick = 4;
+
+document.getElementById('thickness').addEventListener('input', e => {
+  thick = e.target.value;
+  document.getElementById('thickVal').textContent = thick + 'px';
+  document.getElementById('left-line').setAttribute('stroke-width', thick);
+  document.getElementById('right-line').setAttribute('stroke-width', thick);
+});
+
+document.querySelectorAll('.swatch').forEach(sw => {
+  sw.addEventListener('click', () => {
+    document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    sw.classList.add('active');
+    color = sw.dataset.color;
+    document.getElementById('left-line').setAttribute('stroke', color);
+    document.getElementById('right-line').setAttribute('stroke', color);
+  });
+});
+
+function getSVG(dir) {
+  const pts = dir === 'left' ? '38,4 12,30 38,56' : '12,4 38,30 12,56';
+  return `<svg width="50" height="60" viewBox="0 0 50 60" xmlns="http://www.w3.org/2000/svg">\n  <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${thick}" stroke-linecap="round" stroke-linejoin="round"/>\n</svg>`;
+}
+
+function dl(id, filename) {
+  const dir = id === 'svg-left' ? 'left' : 'right';
+  const blob = new Blob([getSVG(dir)], {type: 'image/svg+xml'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = filename; a.click();
+}
+
+function copyCode() {
+  const html = `<!-- Left arrow -->\n${getSVG('left')}\n\n<!-- Right arrow -->\n${getSVG('right')}`;
+  navigator.clipboard.writeText(html).then(() => {
+    const btn = document.querySelectorAll('button')[2];
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy both as HTML', 1500);
+  });
+}
+</script>
