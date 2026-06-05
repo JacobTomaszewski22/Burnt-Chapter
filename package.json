@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:api": "node --env-file=.env.development.local --import tsx --watch src/server.ts",
+    "dev:api2": "node --env-file=.env.development.local --import tsx --watch api/shows.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
