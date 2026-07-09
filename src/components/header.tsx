@@ -28,7 +28,7 @@ const NAV_LINKS = [
 const SOCIAL_LINKS = [
   {
     label: "Spotify",
-    href: "https://open.spotify.com/track/6nOnZOZisXfl13OnaZw2Es?si=5cf9ef30dd344e1e",
+    href: "https://open.spotify.com/artist/1ggfLpkzXNWzHIR8kUno4q?si=Og9uCkm-R0iErQ75w75DLg",
     icon: "/images/link_icons/Spotify_icon.svg",
   },
   {
@@ -113,7 +113,7 @@ export default function Header() {
         />
       </div>
 
-      <div className="absolute left-0 right-0 top-0 z-20 w-full px-4 py-3 sm:px-6 lg:top-[3%]">
+      <div className="fixed top-3 left-0 right-0 z-20 w-full px-4 py-3 sm:px-6 lg:absolute lg:top-[3%]">
         <div className="flex items-center justify-end lg:justify-between">
           <nav
             className="ml-2 hidden flex-row items-center gap-6 lg:flex lg:gap-10"
@@ -135,12 +135,16 @@ export default function Header() {
 
           <button
             type="button"
-            className="cursive-font rounded-md border border-white/20 bg-black/50 px-4 py-2 text-lg font-bold text-white  backdrop-blur-sm transition-colors hover:bg-black/70 lg:hidden"
+            className="cursive-font px-3 py-1 text-lg text-white transition-colors hover:bg-black/70 lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMenuOpen((open) => !open)}
           >
-            Menu
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
           </button>
         </div>
       </div>
@@ -155,7 +159,7 @@ export default function Header() {
         >
           <button
             type="button"
-            className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-antiquewhite transition-colors hover:bg-white/10 hover:text-white"
+            className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-md text-antiquewhite transition-colors hover:bg-white/10 hover:text-white"
             aria-label="Close menu"
             onClick={closeMenu}
           >
@@ -163,7 +167,7 @@ export default function Header() {
               className="h-6 w-6"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke="white"
               strokeWidth="2"
               strokeLinecap="round"
               aria-hidden
