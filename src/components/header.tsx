@@ -28,7 +28,7 @@ const NAV_LINKS = [
 const SOCIAL_LINKS = [
   {
     label: "Spotify",
-    href: "https://open.spotify.com/track/6nOnZOZisXfl13OnaZw2Es?si=5cf9ef30dd344e1e",
+    href: "https://open.spotify.com/artist/1ggfLpkzXNWzHIR8kUno4q?si=Og9uCkm-R0iErQ75w75DLg",
     icon: "/images/link_icons/Spotify_icon.svg",
   },
   {
