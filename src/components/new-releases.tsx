@@ -117,7 +117,7 @@ export function NewReleasesList() {
 }
 
 export default function NewReleases(){
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
   
   if(width>=1024){
     return(
